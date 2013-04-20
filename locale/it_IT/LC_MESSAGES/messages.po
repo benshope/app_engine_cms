@@ -1,0 +1,189 @@
+# Italian (Italy) translations for PROJECT.
+# Copyright (C) 2012 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2012-12-15 21:06-0300\n"
+"PO-Revision-Date: 2012-06-21 01:51-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: it_IT <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+msgid ""
+"<a href=\"http://browsehappy.com/\">Upgrade to a different browser</a>\n"
+"    \tor <a href=\"http://www.google.com/chromeframe/?redirect=true\">\n"
+"    \tinstall Google Chrome Frame</a> to experience this site."
+msgstr ""
+
+msgid "Associate account with"
+msgstr ""
+
+msgid "Big Picture"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+#, fuzzy
+msgid "Change password"
+msgstr "Cambia la tua password"
+
+msgid "Change your email"
+msgstr "Cambia il tuo email"
+
+msgid "Change your password"
+msgstr "Cambia la tua password"
+
+msgid "Confirm Password"
+msgstr "Conferma la Password"
+
+msgid "Congratulations on your Google App Engine Boilerplate powered page."
+msgstr ""
+"Congratulationi, hai creato questa pagina con Google App Engine "
+"Boilerplate."
+
+msgid "Contact"
+msgstr "Contattare"
+
+msgid "Country"
+msgstr "Stato"
+
+msgid "Current Password"
+msgstr "Password attuale"
+
+msgid "Don't have an account?"
+msgstr ""
+
+msgid "Edit Profile"
+msgstr "Modifica Profilo"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Enter a new email address"
+msgstr ""
+
+msgid "Enter your"
+msgstr "Inserire"
+
+msgid "Existing social association"
+msgstr ""
+
+msgid "Forgot your password?"
+msgstr "Password dimenticata?"
+
+#, fuzzy
+#| msgid "Change password"
+msgid "Good Password"
+msgstr "Cambia la tua password"
+
+msgid "Google App Engine Boilerplate is released under the"
+msgstr ""
+
+#, fuzzy
+#| msgid "Reset password"
+msgid "Insecure Password"
+msgstr "Reset password"
+
+msgid "Language"
+msgstr "Lingua"
+
+msgid "Last Name"
+msgstr "Cognome"
+
+msgid "Learn why this Boilerplate Rocks"
+msgstr "Puoi sapere perché questo Boilerplate è sorprendente"
+
+msgid "Login"
+msgstr "Entra"
+
+msgid "Logout"
+msgstr "Esci"
+
+msgid "Message"
+msgstr "Messaggio"
+
+msgid "Name"
+msgstr "Nome"
+
+#, fuzzy
+msgid "New Email"
+msgstr "Cambia il tuo email"
+
+msgid "New Password"
+msgstr "Nuova Password"
+
+msgid "Or Sign in using:"
+msgstr "Oppure Accedi utilizzando:"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Remember me?"
+msgstr "Resta connesso"
+
+msgid "Remove"
+msgstr ""
+
+msgid "Reset password"
+msgstr "Reset password"
+
+msgid "Search User"
+msgstr ""
+
+msgid "Secure Page"
+msgstr "Pagina d'accesso"
+
+#, fuzzy
+#| msgid "Reset password"
+msgid "Secure Password"
+msgstr "Reset password"
+
+msgid "Send Message"
+msgstr "Inviare il messaggio"
+
+#, fuzzy
+#| msgid "Reset password"
+msgid "Short Password"
+msgstr "Reset password"
+
+msgid "Sign Up"
+msgstr "Crea Utente"
+
+msgid "Source Code"
+msgstr "Codice sorgente"
+
+#, fuzzy
+msgid "Update Profile"
+msgstr "Modifica Profilo"
+
+msgid "User Details"
+msgstr ""
+
+msgid "Username"
+msgstr "Nome utente"
+
+msgid "Username or Email"
+msgstr "Username o Email"
+
+msgid "Your browser is <em>ancient!</em>"
+msgstr "Il tuo browser è <em>obsoleto!</em>"
+
+msgid "download the Source Code"
+msgstr "scaricare il codice sorgente"
+
+msgid "or just"
+msgstr "o semplicemente"
+
+msgid "to help you to create your application."
+msgstr "per iniziare a creare la tua applicazione."
+

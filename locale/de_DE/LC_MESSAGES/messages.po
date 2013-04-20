@@ -1,0 +1,187 @@
+# German (Germany) translations for PROJECT.
+# Copyright (C) 2012 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2012-12-15 21:06-0300\n"
+"PO-Revision-Date: 2012-08-13 08:13+0100\n"
+"Last-Translator: Siegfried Hirsch <siegfried.hirsch@gmail.com>\n"
+"Language-Team: de_DE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+msgid ""
+"<a href=\"http://browsehappy.com/\">Upgrade to a different browser</a>\n"
+"    \tor <a href=\"http://www.google.com/chromeframe/?redirect=true\">\n"
+"    \tinstall Google Chrome Frame</a> to experience this site."
+msgstr ""
+"<a href=\"http://browsehappy.com/\">Upgraden Sie zu einem anderen "
+"Browser</a>\n"
+"    \tor <a href=\"http://www.google.com/chromeframe/?redirect=true\">\n"
+"    \tinstalliere Google Chrome Frame</a> um diese Seite zu geniesen."
+
+msgid "Associate account with"
+msgstr "Verbinde Konto mit"
+
+msgid "Big Picture"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Change password"
+msgstr "Ändern Passwort"
+
+msgid "Change your email"
+msgstr "Ändern Sie Ihre E-Mail"
+
+msgid "Change your password"
+msgstr "Ändern Sie Ihr Passwort"
+
+msgid "Confirm Password"
+msgstr "Bestätigen Sie das Passwort"
+
+msgid "Congratulations on your Google App Engine Boilerplate powered page."
+msgstr "Herzlichen Glückwunsch zu Ihrer Google App Engine Boilerplate Seite."
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Country"
+msgstr "Land"
+
+msgid "Current Password"
+msgstr "Aktuelles Passwort"
+
+msgid "Don't have an account?"
+msgstr ""
+
+msgid "Edit Profile"
+msgstr "Bearbeite Profil"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Enter a new email address"
+msgstr "Geben Sie eine neue E-Mail-Adresse an"
+
+msgid "Enter your"
+msgstr "Eingabe"
+
+msgid "Existing social association"
+msgstr "Bestehende Social-Verbindungen"
+
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+
+#, fuzzy
+#| msgid "Change password"
+msgid "Good Password"
+msgstr "Ändern Passwort"
+
+msgid "Google App Engine Boilerplate is released under the"
+msgstr "Google App Engine Boilerplate veröffentlicht unter der"
+
+#, fuzzy
+#| msgid "Reset password"
+msgid "Insecure Password"
+msgstr "Passwort zurücksetzen"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Last Name"
+msgstr "Nachname"
+
+msgid "Learn why this Boilerplate Rocks"
+msgstr "Lernen Sie warum dieses Boilerplate rockt"
+
+msgid "Login"
+msgstr "Anmelden"
+
+msgid "Logout"
+msgstr "Abmelden"
+
+msgid "Message"
+msgstr "Nachricht"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "New Email"
+msgstr "Neue E-Mail"
+
+msgid "New Password"
+msgstr "Neues Passwort"
+
+msgid "Or Sign in using:"
+msgstr "Oder Anmelden via"
+
+msgid "Password"
+msgstr "Passwort"
+
+msgid "Remember me?"
+msgstr "Eingaben speichern?"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Reset password"
+msgstr "Passwort zurücksetzen"
+
+msgid "Search User"
+msgstr ""
+
+msgid "Secure Page"
+msgstr "Sichere Seite"
+
+#, fuzzy
+#| msgid "Reset password"
+msgid "Secure Password"
+msgstr "Passwort zurücksetzen"
+
+msgid "Send Message"
+msgstr "Sende Nachricht"
+
+#, fuzzy
+#| msgid "Reset password"
+msgid "Short Password"
+msgstr "Passwort zurücksetzen"
+
+msgid "Sign Up"
+msgstr "Anmelden"
+
+msgid "Source Code"
+msgstr "Quellcode"
+
+msgid "Update Profile"
+msgstr "Profil aktualisieren"
+
+msgid "User Details"
+msgstr ""
+
+msgid "Username"
+msgstr "Benutzername"
+
+msgid "Username or Email"
+msgstr "Benutzername oder E-Mail"
+
+msgid "Your browser is <em>ancient!</em>"
+msgstr "Ihr Browser ist <em>antik!</em>"
+
+msgid "download the Source Code"
+msgstr "den Quellcode herunterladen"
+
+msgid "or just"
+msgstr "oder jetzt"
+
+msgid "to help you to create your application."
+msgstr "um Ihnen zu helfen eine Anwendung zu erzeugen"
+

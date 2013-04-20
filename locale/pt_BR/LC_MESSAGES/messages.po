@@ -1,0 +1,184 @@
+# Portugues (Brasil) translations for PROJECT.
+# Copyright (C) 2012 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2012-12-15 21:06-0300\n"
+"PO-Revision-Date: 2012-06-21 01:50-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en_US <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+msgid ""
+"<a href=\"http://browsehappy.com/\">Upgrade to a different browser</a>\n"
+"    \tor <a href=\"http://www.google.com/chromeframe/?redirect=true\">\n"
+"    \tinstall Google Chrome Frame</a> to experience this site."
+msgstr ""
+"<a href=\"http://browsehappy.com/\">Atualize para um browser "
+"diferente</a>\n"
+"    \tou <a href=\"http://www.google.com/chromeframe/?redirect=true\">\n"
+"    \tisntale Google Chrome Frame</a> para usar este site."
+
+msgid "Associate account with"
+msgstr "Associar conta com"
+
+msgid "Big Picture"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Change password"
+msgstr "Alterar senha"
+
+msgid "Change your email"
+msgstr "Alterar seu email"
+
+msgid "Change your password"
+msgstr "Alterar sua senha"
+
+msgid "Confirm Password"
+msgstr "Confirme a Senha"
+
+msgid "Congratulations on your Google App Engine Boilerplate powered page."
+msgstr "Parabéns pela sua página movida a Google App Engine Boilerplate."
+
+msgid "Contact"
+msgstr "Contato"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Current Password"
+msgstr "Senha Atual"
+
+msgid "Don't have an account?"
+msgstr ""
+
+msgid "Edit Profile"
+msgstr "Editar perfil"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Enter a new email address"
+msgstr "Informe um novo endereço de email"
+
+msgid "Enter your"
+msgstr "Etnre seu"
+
+msgid "Existing social association"
+msgstr "Associação social existente"
+
+msgid "Forgot your password?"
+msgstr "Esqueceu sua senha?"
+
+#, fuzzy
+msgid "Good Password"
+msgstr "Alterar senha"
+
+msgid "Google App Engine Boilerplate is released under the"
+msgstr "Googla App Engine Boilerplate foi lançado sob a"
+
+#, fuzzy
+msgid "Insecure Password"
+msgstr "Resetar senha"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Last Name"
+msgstr "Sobrenome"
+
+msgid "Learn why this Boilerplate Rocks"
+msgstr "Entenda por que esse Boilerplate detona"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "New Email"
+msgstr "Novo Email"
+
+msgid "New Password"
+msgstr "Nova Senha"
+
+msgid "Or Sign in using:"
+msgstr "Ou entre usando:"
+
+msgid "Password"
+msgstr "Senha"
+
+msgid "Remember me?"
+msgstr "Lembra-se de mim?"
+
+msgid "Remove"
+msgstr "Remover"
+
+msgid "Reset password"
+msgstr "Resetar senha"
+
+msgid "Search User"
+msgstr ""
+
+msgid "Secure Page"
+msgstr "Página Segura"
+
+#, fuzzy
+msgid "Secure Password"
+msgstr "Resetar senha"
+
+msgid "Send Message"
+msgstr "Enviar Mensagem"
+
+#, fuzzy
+msgid "Short Password"
+msgstr "Resetar senha"
+
+msgid "Sign Up"
+msgstr "Se Cadastrar"
+
+msgid "Source Code"
+msgstr "Código Fonte"
+
+msgid "Update Profile"
+msgstr "Atualizar Perfil"
+
+msgid "User Details"
+msgstr ""
+
+msgid "Username"
+msgstr "Usuário"
+
+msgid "Username or Email"
+msgstr "Usuário e Email"
+
+msgid "Your browser is <em>ancient!</em>"
+msgstr "Seu browser é <em>pré-histórico!</em>"
+
+msgid "download the Source Code"
+msgstr "baixar o Código Fonte"
+
+msgid "or just"
+msgstr "ou simplesmente"
+
+msgid "to help you to create your application."
+msgstr "para ajuda-lo a criar sua aplicação."
+
