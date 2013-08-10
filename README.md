@@ -1,5 +1,4 @@
-# BenPress
-## A Simple Python + Javascript CMS
+## BenPress: A Simple Python + Javascript CMS
 
 I love Wordpress but I hate PHP, SQL, and Apache.
 
