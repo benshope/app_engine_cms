@@ -9,7 +9,9 @@ BenPress is a re-imagining of the Wordpress CMS - built on a modern, flexible, s
 
 
 
-Technologies Stack (A Very Short List)
---------------------------------------
-+ [Twitter Bootstrap](http://twitter.github.com/bootstrap/) Front-End Template
-+ [Angular JS](http://twitter.github.com/bootstrap/) Template for Desktop Version.
+Technologies Stack (A Thankfully Short List)
+--------------------------------------------
++ [Twitter Bootstrap](http://twitter.github.com/bootstrap/) CSS Framework
++ [Angular JS](http://twitter.github.com/bootstrap/) Javascript Framework
++ [WebApp2](http://twitter.github.com/bootstrap/) Back-End Framework
+
