@@ -1,12 +1,19 @@
 ## BenPress: A Better CMS
 
-I love Wordpress but I hate PHP, SQL, and Apache.
+I love Wordpress, but I hate PHP, SQL, and Apache.
 
 BenPress is a reimagining of the Wordpress CMS - built on a modern, flexible, scalable stack.
 
-- The back-end is Google App Engine - it provides static files (JSON, images, css...)
-- The front-end is AngularJS - it turns these static files into a website.
+Features To Work On Now:
+- Pages
+- Posts
+- Comments
+- A Contact Form
 
+Features To Work On Later
+- Back-end
+- Users
+- Plugins/Themes?
 
 
 Technologies Stack (A Thankfully Short List)
