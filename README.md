@@ -4,15 +4,14 @@ I love Wordpress, but I hate PHP, SQL, and Apache.
 
 BenPress is a reimagining of the Wordpress CMS - built on a modern, flexible, scalable stack.
 
-Features To Work On Now:
+
+## Features
 - Pages
 - Posts
 - Comments
-- A Contact Form
-
-Features To Work On Later
-- Back-end
-- Users
+- Contact Form
+- Back-end?
+- Users?
 - Plugins/Themes?
 
 
