@@ -5,7 +5,7 @@ I love Wordpress, but I hate PHP, SQL, and Apache.
 BenPress is a reimagining of the Wordpress CMS - built on a modern, flexible, scalable stack.
 
 
-## Development: To Do
+## To Do
 - Pages
 - Posts
 - Comments
