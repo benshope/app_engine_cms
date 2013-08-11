@@ -1,23 +1,21 @@
 from fabric.api import local
 
-# Start the local app server
-def run(mode="normal"):
+# Start the development server - $ fab run
+def run():
     local("dev_appserver.py .")
 
-# Save to GitHub
-def save(m="Auto-Update"):
-    local("git add .")
-    local("git commit -a -m '{0}'".format(m))
-    local("git push")
-
-# Upload to App Engine
-def deploy():
-    """ upload the app """
+# Upload the app to App Engine - $ fab upload
+def upload():
     local("appcfg.py --oauth2 update .")
 
-# Upload to App Engine and save to GitHub
-def update(m="Auto-Update"):
+# Save to github - $ fab save:m="First commit"
+def save(m="Auto-Update"):
+    """ save the to github """
     local("git add .")
     local("git commit -a -m '{0}'".format(m))
     local("git push")
+
+# Save to GitHub and upload to App Engine - $ fab update:m="First commit"
+def update(m="Auto-Update"):
+    save(m)
     local("appcfg.py --oauth2 update .")
