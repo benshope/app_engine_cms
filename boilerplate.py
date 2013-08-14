@@ -7,7 +7,7 @@ from google.appengine.api import memcache
 from google.appengine.ext import db
 from google.appengine.api import users
 
-template_dir = os.path.join(os.path.dirname(__file__), 'servertemplates')
+template_dir = os.path.dirname(__file__)
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(template_dir), autoescape=True, variable_start_string='{{{', variable_end_string='}}}')
 
