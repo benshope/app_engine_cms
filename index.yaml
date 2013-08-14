@@ -10,25 +10,3 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
-- kind: User
-  properties:
-  - name: __key__
-    direction: desc
-
-- kind: User
-  properties:
-  - name: email
-  - name: __key__
-    direction: desc
-
-- kind: User
-  properties:
-  - name: last_name
-  - name: __key__
-    direction: desc
-
-- kind: User
-  properties:
-  - name: username
-  - name: __key__
-    direction: desc
