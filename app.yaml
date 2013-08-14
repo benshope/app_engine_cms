@@ -16,8 +16,8 @@ handlers:
   upload: app/img/favicon\.ico
 - url: /app
   static_dir: app
-- url: /partials
-  static_dir: app/partials
+- url: /html
+  static_dir: app/html
 - url: .*
   script: main.app
 

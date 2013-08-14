@@ -14,8 +14,8 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
 
     $locationProvider.html5Mode(true).hashPrefix('!');
 
-    $routeProvider.when('/', {templateUrl: 'partials/partial1.html', controller: 'MainCtrl'});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-    $routeProvider.when('/view3', {templateUrl: 'partials/partial3.html', controller: 'MyCtrl3'});
+    $routeProvider.when('/', {templateUrl: 'html/partial1.html', controller: 'MainCtrl'});
+    $routeProvider.when('/view2', {templateUrl: 'html/partial2.html', controller: 'MyCtrl2'});
+    $routeProvider.when('/view3', {templateUrl: 'html/partial3.html', controller: 'MyCtrl3'});
     $routeProvider.otherwise({redirectTo: '/'});
   }]);
