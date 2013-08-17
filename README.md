@@ -15,8 +15,8 @@ Angular Engine is a reimagining of the Wordpress CMS - built on a modern, flexib
 - Plugins/Themes?
 
 
-Technologies Stack (A Thankfully Short List)
---------------------------------------------
+Technologies
+------------
 + [Twitter Bootstrap](http://twitter.github.com/bootstrap/) CSS Framework
 + [Angular JS](http://twitter.github.com/bootstrap/) Javascript Framework
 + [WebApp2](http://twitter.github.com/bootstrap/) Back-End Framework
