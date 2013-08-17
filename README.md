@@ -1,8 +1,8 @@
-## BenPress: A Better CMS
+## Angular Engine: A Better CMS
 
 I love Wordpress, but I hate PHP, SQL, and Apache.
 
-BenPress is a reimagining of the Wordpress CMS - built on a modern, flexible, scalable stack.
+Angular Engine is a reimagining of the Wordpress CMS - built on a modern, flexible, scalable stack.
 
 
 ## To Do
