@@ -1,19 +1,8 @@
-## Angular Engine: A Better CMS
+## Angular Engine: A Better CMS (In Progress)
 
 I love Wordpress, but I hate PHP, SQL, and Apache.
 
-Angular Engine is a reimagining of the Wordpress CMS - built on a modern, flexible, scalable stack.
-
-
-## To Do
-- Pages
-- Posts
-- Comments
-- Contact Form
-- Back-end?
-- Users?
-- Plugins/Themes?
-
+Angular Engine is a reimagining of the simple CMS - built on a modern, flexible, scalable stack.
 
 ## Technologies
 + [Twitter Bootstrap](http://twitter.github.com/bootstrap/) CSS Framework
