@@ -8,7 +8,7 @@ from google.appengine.api import memcache
 from google.appengine.ext import db
 from google.appengine.api import users
 
-jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)), autoescape=True)
+jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)), autoescape=True, variable_start_string='{{{', variable_end_string='}}}')
 
 class RequestHandler(webapp2.RequestHandler):
     def render_string(self, template, params):
@@ -23,7 +23,7 @@ class RequestHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    # Welet angular handle routing on the client side
+    # We let angular handle routing on the client side
     ('/', RequestHandler),
     ('/view2', RequestHandler),
     ('/view3', RequestHandler)
