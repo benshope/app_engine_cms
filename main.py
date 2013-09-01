@@ -41,11 +41,9 @@ class MainHandler(webapp2.RequestHandler):
         self.render("index.html",{"title": "My Angular App"})
 
 
-
 app = webapp2.WSGIApplication([
-    # CLIENT SIDE PAGES (LET ANGULAR HANDLE ROUTING)
+    # We let angular handle routing on the client side
     ('/', MainHandler),
     ('/view2', MainHandler),
     ('/view3', MainHandler)
-    # OTHER SERVER PAGES / ENDPOINTS
 ], debug=True)
