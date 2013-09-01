@@ -14,7 +14,7 @@ class HTML_Handler(webapp2.RequestHandler):
 
     def get(self):
     	template = jinja_environment.get_template("index.html")
-    	self.response.out.write(template.render({"title": "My Angular App"}))
+    	self.response.out.write(template.render())
 
 class JSON_Handler(webapp2.RequestHandler):
     def render_string(self, template, params):
