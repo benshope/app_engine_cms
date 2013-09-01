@@ -30,6 +30,6 @@ class JSON_Handler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     # We let angular handle routing on the client side
-    ('/json', JSON_Handler),
-    ('/', HTML_Handler)
+    (r'/json', JSON_Handler),
+    (r'/', HTML_Handler)
 ], debug=True)
