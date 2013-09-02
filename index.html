@@ -5,31 +5,292 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Angular App</title>
 
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="css/bootstrap.min.css"/> -->
-  <link rel="stylesheet" href="/app/css/bootstrap-themes/cosmo.css"/>
-  <link rel="stylesheet" href="/app/css/bootstrap-responsive.min.css"/>
+  <!-- <link rel="stylesheet" href="/app/css/bootstrap-themes/cosmo.css"/> -->
   <link rel="stylesheet" href="/app/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="/app/css/app.css"/>
+  <!-- <link rel="stylesheet" href="/app/css/app.css"/> -->
+  <link rel="stylesheet" href="/app/css/style.css"/>
+  <link rel="stylesheet" href="/app/css/blue.css"/>
+  <link rel="stylesheet" href="/app/css/menu.css"/>
+  <link rel="stylesheet" href="/app/css/linecons.css"/>
+  <!-- <link rel="stylesheet" href="/app/css/bootstrap-responsive.min.css"/> -->
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="navbar-inner">
-      <a href="/" class="brand">Ben Shope</a>
-      <ul class="nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/view2">About</a></li>
-        <li><a href="/view3">Contact</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div ng-view></div>
+
+
+    
+    <header id="header" class="wrapper wrapper-header wrapper-header-big">
+      <div class="site-header">
+        <div class="site-branding">
+            <div class="site-logo site-logo_image">
+              <a class="site-home-link" href="http://pixelgrade.com/demos/fuse" title="Fuse">
+                <img src="http://pixelgrade.com/demos/fuse/wp-content/uploads/2013/06/logo_big.png"  rel="logo" alt="Fuse"/>
+              </a>
+            </div>
+          </div>              
+          <nav class="site-navigation" role="navigation">
+            <h6 class="hidden" hidden>Main navigation</h6>
+            <ul id="menu-header-menu" class="site-mainmenu"><li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-502 current_page_item menu-item-503"><a href="/">Home</a></li>
+              <li id="menu-item-507" class="menu-item"><a href="/view2">About</a></li>
+              <li id="menu-item-505" class="menu-item"><a href="/view3">Projects</a>
+              <ul class="sub-menu">
+                <li id="menu-item-688" class="menu-item"><a href="http://pixelgrade.com/demos/fuse/portfolio/project-example/">Project Page</a></li>
+                <li id="menu-item-687" class="menu-item"><a href="http://pixelgrade.com/demos/fuse/portfolio/">Portfolio Archive</a></li>
+                <li id="menu-item-769" class="menu-item"><a href="http://pixelgrade.com/demos/fuse/portfolio-category/photography/">Photography</a></li>
+              </ul>
+              </li>
+            </ul>       
+          </nav>
+        </div>
+      </header>
+
+    <div class="container-fluid">
+      <div class="row-fluid no-space-3">
+        <div class="span4 greyzone">
+          <h4>ABOUT MODUS.</h4>
+          <p>Modus is a wonderful theme for everyone. No matter if you are a designer, photographer, freelancer or developer; this theme is a great way to show your work with style. Available now on Wrapbootstrap.</p>
+           <div ng-view></div>
+          <br>
+          <p>
+            <a href="#" class="modus_color modus_color_transition"><i class="icon-twitter"></i></a>
+            <a href="#" class="modus_color modus_color_transition"><i class="icon-facebook"></i></a>
+            <a href="#" class="modus_color modus_color_transition"><i class="icon-tumblr"></i></a>
+            <a href="#" class="modus_color modus_color_transition"><i class="icon-instagram"></i></a>
+            <a href="#" class="modus_color modus_color_transition"><i class="icon-apple"></i></a>
+            <a href="#" class="modus_color modus_color_transition"><i class="icon-linkedin"></i></a>
+          </p>
+        </div><!-- /span4 -->
+        
+        <div class="span4 whitezone">
+          <h4>IMPORTANT STUFF</h4>
+          <p>This theme is based on Twitter Bootstrap 2.3.2. Uses two beautiful sets of icons, Linecons and the latest Fontawesome version.</p>
+          <p>It is time to create the site you deserve with this amazing theme.</p>
+          <p><a href="#">Buy Now</a></p>
+        </div><!-- /span4 -->
+
+      <!-- ===ACCORDION GROUP === -->       
+        <div class="span4">
+        <br>
+            <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                        <li_ class="li_diamond"></li_> First Class Design
+                        </a>
+                    </div><!-- /accordion-heading -->
+                    <div id="collapseOne" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+            </div><!-- /accordion-inner -->
+                    </div><!-- /collapse -->
+                </div><!-- /accordion-group -->
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                        <li_ class="li_display"></li_> Retina Ready Theme
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="accordion-body collapse">
+                        <div class="accordion-inner">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+            </div><!-- /accordion-inner -->
+                    </div><!-- /collapse -->
+                </div><!-- /accordion-group -->
+
+                 <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                        <li_ class="li_like"></li_> Awesome Support
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="accordion-body collapse">
+                        <div class="accordion-inner">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+            </div><!-- /accordion-inner -->
+                    </div><!-- /collapse -->
+                </div><!-- /accordion-group -->
+                
+                 <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                        <li_ class="li_phone"></li_> Responsive Design
+                        </a>
+                    </div>
+                    <div id="collapseFour" class="accordion-body collapse">
+                        <div class="accordion-inner">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+            </div><!-- /accordion-inner -->
+                    </div><!-- /collapse -->
+                </div><!-- /accordion-group -->
+        </div><!-- /span4 -->
+      </div><!-- /row-fluid -->
+    </div> <!-- /container-fluid -->
+    
+    
+    <!-- ===BEST WOERK SECTION === -->
+    <div class="container-fluid">
+    <h5 class="title-small">VIEW PORTFOLIO</h5>
+              
+      
+      <!-- === FIRST ROW PORTFOLIO -->
+      <div class="row-fluid no-space-3">
+      
+        <div class="span4">
+          <div class="grid mask">
+          <figure>
+            <img src="assets/img/portfolio/folio01.jpg" alt="">
+            <figcaption>
+              <h5>MOUNTAIN LOVE</h5>
+              <a href="single-project.html">Take a look</a>
+            </figcaption><!-- /figcaption -->
+          </figure><!-- /figure -->
+          </div><!-- /grid-mask -->
+        </div><!-- /span4 -->
+        
+        <div class="span4 whitezone desc">
+          <h4>MOUNTAIN LOVE.</h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p><tag><i class="icon-tag"></i> DESIGN | PHOTOGRAPHY | WORDPRESS</tag></p>
+          <p><a href="single-project.html">View Project</a></p>
+        </div><!-- /span4 -->
+        
+        <div class="span4">
+          <div class="grid mask">
+          <figure>
+            <img src="assets/img/portfolio/folio02.jpg" alt="">
+            <figcaption>
+              <h5>MOUNTAIN LOVE</h5>
+              <a href="single-project.html">Take a look</a>
+            </figcaption><!-- /figcaption -->
+          </figure><!-- /figure -->
+          </div><!-- /grid-mask -->
+        </div><!-- /span4 -->
+      </div><!-- /row-fluid -->
+      
+      <!-- === SECOND ROW PORTFOLIO -->
+      <div class="row-fluid no-space-3">
+      
+        <div class="span4">
+          <div class="grid mask">
+          <figure>
+            <img src="assets/img/portfolio/folio03.jpg" alt="">
+            <figcaption>
+              <h5>AUDI PROMOTION</h5>
+              <a href="single-project.html">Take a look</a>
+            </figcaption><!-- /figcaption -->
+          </figure><!-- /figure -->
+          </div><!-- /grid-mask -->
+        </div><!-- /span4 -->
+        
+        <div class="span4">
+          <div class="grid mask">
+          <figure>
+            <img src="assets/img/portfolio/folio04.jpg" alt="">
+            <figcaption>
+              <h5>AUDI PROMOTION</h5>
+              <a href="single-project.html">Take a look</a>
+            </figcaption><!-- /figcaption -->
+          </figure><!-- /figure -->
+          </div><!-- /grid-mask -->
+        </div><!-- /span4 -->
+        
+        <div class="span4 whitezone desc">
+          <h4>AUDI PROMOTION.</h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <p><tag><i class="icon-tag"></i> DESIGN | PHOTOGRAPHY | WORDPRESS</tag></p>
+          <p><a href="single-project.html">View Project</a></p>
+        </div><!-- /span4 -->
+      </div><!-- /row-fluid -->
+    </div><!-- /container -->
+    
+    
+    
+   <div class="container-fluid">
+     <div class="row-fluid">
+       <div class="span12">
+       
+       <!-- === TESTIMONIAL ROTATOR === -->
+        <div id="cbp-qtrotator" class="cbp-qtrotator">
+          <!-- QUOTE 1 -->
+          <div class="cbp-qtcontent">
+            <img src="assets/img/1.jpg" alt="img01" class="img-circle">
+            <blockquote>
+              <p>Thank you so much for all. Your work was amazing, our site is now exactly what we want.</p>
+              <footer>Jane Smith</footer>
+            </blockquote>
+          </div>
+          <!-- QUOTE 2 -->
+          <div class="cbp-qtcontent">
+            <img src="assets/img/2.jpg" alt="img02" class="img-circle">
+            <blockquote>
+              <p>Modus made more than expected. Talented people working side by side to help us to growth.</p>
+              <footer>Paul Rodgers</footer>
+            </blockquote>
+          </div>
+        </div><!-- /cbq-rotator -->
+       </div><!-- /span12 -->
+     </div><!-- /row-fluid -->
+   </div><!-- /container-fluid -->
+   
+   
+   <!-- === FOOTER SECTION === -->
+   
+   <div class="container-fluid">
+     <h6 class="title-small"><i class="icon-twitter"></i> FOLLOW MODUS ON TWITTER @MODUSTHEME</h6>
+     <div class="footerzone">
+       <div class="row-fluid">
+         <div class="span4">
+           <h4>FROM THE BLOG</h4>
+           <p>Blog Post One</p>
+           <p>Blog Post Two</p>
+           <p>Blog Post Three</p>
+           <br>
+         </div><!-- /span4 -->
+         
+         <div class="span4">
+           <h4>ABOUT MODUS</h4>
+          <p>Modus is a wonderful theme for everyone. No matter if you are a designer, photographer, freelancer or developer; this theme is a great way to show your work with style.</p>
+          <br>
+         </div><!-- /span4 -->
+         
+         <div class="span4">
+           <h4>OUR BUNKER</h4>
+           <p>Av. Sunderville, 987 <br/>
+            Madrid, Spain. 
+           </p>
+           <p>+34 888094333</p>
+           <p>yourmail@domain.com</p>
+         </div><!-- /span4 -->
+       </div><!-- /row-fluid -->
+     </div><!-- /footerzone -->
+     
+     <h6 class="title-footer">
+        <i class="icon-twitter"></i>
+        <i class="icon-tumblr"></i>
+        <i class="icon-facebook"></i>
+        <i class="icon-apple"></i>
+        <i class="icon-linkedin"></i>
+        <i class="icon-instagram"></i>
+     </h6>
+     
+   </div><!-- /container-fluid -->
+
+
+
+
+
+
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
   -->
-  <script src="/app/lib/angular/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
   <script src="/app/js/app.js"></script>
   <script src="/app/js/services/services.js"></script>
   <script src="/app/js/controllers/controller1.js"></script>
