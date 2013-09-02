@@ -51,8 +51,11 @@
       <div class="row-fluid no-space-3">
         <div class="span4 greyzone">
           <h4>ABOUT MODUS.</h4>
-          <p>Modus is a wonderful theme for everyone. No matter if you are a designer, photographer, freelancer or developer; this theme is a great way to show your work with style. Available now on Wrapbootstrap.</p>
-           <div ng-view></div>
+          <form action="/sign" method="post">
+            <div><textarea name="content" rows="3" cols="60"></textarea></div>
+            <div><input type="submit" value="Sign Guestbook"></div>
+          </form>
+          <div ng-view></div>
           <br>
           <p>
             <a href="#" class="modus_color modus_color_transition"><i class="icon-twitter"></i></a>
