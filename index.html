@@ -14,18 +14,22 @@
 </head>
 <body>
 
-<nav class="site-navigation" role="navigation">
-  <ul id="menu-header-menu" class="site-mainmenu">
-  <li class="menu-item"><a href="/">Home</a></li>
-    <li class="menu-item"><a href="/view2">View 2</a></li>
-    <li class="menu-item"><a href="/view3">View 3</a></li>
-  </ul>       
-</nav>
+<div class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="brand">Angular Engine</a>
+    <ul class="nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/view2">View2</a></li>
+      <li><a href="/view3">View3</a></li>
+    </ul>
+  </div>
+</div>
 
 <form action="/sign" method="post">
   <div><textarea name="content" rows="3" cols="60"></textarea></div>
   <div><input type="submit" value="Sign Guestbook"></div>
 </form>
+
 <div ng-view></div>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
