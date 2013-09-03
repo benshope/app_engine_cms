@@ -14,14 +14,12 @@ def datastore_key(entity_name='page'):
     return ndb.Key('Page', entity_name)
 
 class HTML_Handler(webapp2.RequestHandler):
-    def get(self):
+    def get(self, url):
     	template = jinja_environment.get_template("index.html")
     	self.response.out.write(template.render())
 
-    def post(self):
-        self.response.write('<html><body>You wrote:<pre>')
-        self.response.write(cgi.escape(self.request.get('content')))
-        self.response.write('</pre></body></html>')
+    def post(self, url):
+        self.response.write('HTML Post')
 
 class JSON_Handler(webapp2.RequestHandler):
     def render_string(self, template, params):
@@ -31,7 +29,10 @@ class JSON_Handler(webapp2.RequestHandler):
     def render(self, template, kw):
         self.response.out.write(self.render_string(template, kw))
 
-    def get(self):
-        self.response.out.write('Hello world!')
+    def post(self, url):
+        self.response.write('JSON Post')
 
-app = webapp2.WSGIApplication([(r'/json/.*', JSON_Handler),(r'/.*', HTML_Handler)], debug=True)
+    def get(self, url):
+        self.response.out.write('JSON Get')
+
+app = webapp2.WSGIApplication([('/json/(.*)', JSON_Handler),('/(.*)', HTML_Handler)], debug=True)
