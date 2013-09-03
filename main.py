@@ -9,7 +9,7 @@ from google.appengine.api import users
 
 jinja_environment = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)), autoescape=True)
 
-class Page(ndb.MOdel):
+class Page(ndb.Model):
 	content = ndb.StringProperty()
   	date = ndb.DateTimeProperty(auto_now_add=True)
 
