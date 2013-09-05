@@ -1,12 +1,12 @@
-## Google App Engine CMS (In Progress)
+## App Engine CMS (In Progress)
 
 I love Wordpress, but I hate PHP, SQL, and Apache.
 
-App Engine CMS is a reimagining of the simple CMS - built on a modern, flexible, scalable stack.
+Google App Engine CMS is a reimagining of the simple CMS - built fast, flexible, and scalable.
 
-For some developers, this CMS will just save them time they would spend construcing pages, posts, comments, and a contact form for simple websites.
+For some developers, this CMS will just save them time they would spend construcing pages, posts, comments, and forms for a simple website.
 
-For other developers, the main benefit of this CMS will be as a best-practices boilerplate to begin creating amazing web experiences; with AngularJS and WebApp2, the sky is the limit.
+For other developers, the main benefit of this CMS will be as a best-practices boilerplate - a starting-point to create amazing web experiences.  With AngularJS and WebApp2, the sky is the limit.
 
 ## Technologies
 + [WebApp2](http://twitter.github.com/bootstrap/) Back-End Web Server
