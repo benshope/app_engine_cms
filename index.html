@@ -25,6 +25,12 @@
   </div>
 </div>
 
+<ul>
+    <li ng-repeat="friend in friends">
+        {{ friend.id }} : {{ friend.name }}
+    </li>
+</ul>
+
 <form action="/sign" method="post">
   <div><textarea name="content" rows="3" cols="60"></textarea></div>
   <div><input type="submit" value="Sign Guestbook"></div>
