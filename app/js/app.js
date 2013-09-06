@@ -1,69 +1,22 @@
 'use strict';
 
-var myApp = angular.module('myApp', ['ui.bootstrap']).
-  config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
-    $routeProvider.when('/', {templateUrl: 'html/home.html', controller: 'PageController'});
+var myApp = angular.module('myApp', ['ui.bootstrap'])
+
+myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
+    $routeProvider.when('/', {templateUrl: 'html/home.html', controller: 'HomeController'});
     $routeProvider.when('/login', {templateUrl: 'html/login.html', controller: 'LoginController'});
     $routeProvider.otherwise({redirectTo: '/'});
     $locationProvider.html5Mode(true);
-  }])  // Everything after this just allows you to scroll to a place on the destination page
-  .run(function($rootScope, $location, $anchorScroll, $routeParams) {
+  }]);
+
+myApp.run(function($rootScope, $location, $anchorScroll, $routeParams) {
     $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
       $location.hash($routeParams.scrollTo);
       $anchorScroll();
     });
   });
 
-
-myApp.controller('PageController', function($scope) { 
-
- }]);
-
-myApp.controller('LoginController', function($scope) { 
-  $scope.credentials = { username: "", password: "" };
- }]);
-
-
-
-
-
-
-
-
-
-
-app.config(function($routeProvider) {
-
-  $routeProvider.when('/login', {
-    templateUrl: 'login.html',
-    controller: 'LoginController'
-  });
-
-  $routeProvider.when('/home', {
-    templateUrl: 'home.html',
-    controller: 'HomeController'
-  });
-
-  $routeProvider.otherwise({ redirectTo: '/login' });
-
-});
-
-app.factory("AuthenticationService", function($location) {
-  return {
-    login: function(credentials) {
-      if (credentials.username !== "ralph" || credentials.password !== "wiggum") {
-        alert("Username must be 'ralph', password must be 'wiggum'");
-      } else {
-        $location.path('/home');
-      }
-    },
-    logout: function() {
-      $location.path('/login');
-    }
-  };
-});
-
-app.controller("LoginController", function($scope, $location, AuthenticationService) {
+myApp.controller("LoginController", function($scope, $location, AuthenticationService) {
   $scope.credentials = { username: "", password: "" };
 
   $scope.login = function() {
@@ -71,7 +24,7 @@ app.controller("LoginController", function($scope, $location, AuthenticationServ
   }
 });
 
-app.controller("HomeController", function($scope, AuthenticationService) {
+myApp.controller("HomeController", function($scope, AuthenticationService) {
   $scope.title = "Awesome Home";
   $scope.message = "Mouse Over these images to see a directive at work!";
 
@@ -80,7 +33,7 @@ app.controller("HomeController", function($scope, AuthenticationService) {
   };
 });
 
-app.directive("showsMessageWhenHovered", function() {
+myApp.directive("showsMessageWhenHovered", function() {
   return {
     restrict: "A", // A = Attribute, C = CSS Class, E = HTML Element, M = HTML Comment
     link: function(scope, element, attributes) {
@@ -93,6 +46,21 @@ app.directive("showsMessageWhenHovered", function() {
         scope.message = originalMessage;
         scope.$apply();
       });
+    }
+  };
+});
+
+myApp.factory("AuthenticationService", function($location) {
+  return {
+    login: function(credentials) {
+      if (credentials.username !== "ralph" || credentials.password !== "wiggum") {
+        alert("Username must be 'ralph', password must be 'wiggum'");
+      } else {
+        $location.path('/home');
+      }
+    },
+    logout: function() {
+      $location.path('/login');
     }
   };
 });

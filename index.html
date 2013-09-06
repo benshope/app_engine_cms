@@ -24,18 +24,12 @@
   </div>
 </div>
 
-<ul>
-    <li ng-repeat="friend in friends">
-        {{ friend.id }} : {{ friend.name }}
-    </li>
-</ul>
-
-<form action="/sign" method="post">
-  <div><textarea name="content" rows="3" cols="60"></textarea></div>
-  <div><input type="submit" value="Sign Guestbook"></div>
-</form>
-
-<div ng-view></div>
+<div class="">
+  <div class="large-12">
+    <h1>Introduction to AngularJS</h1>
+    <div id="view" ng-view></div>
+  </div>
+</div>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
