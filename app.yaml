@@ -4,12 +4,6 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
-skip_files:
-- ^README\..*
-- \.gitignore
-- ^\.git/.*
-- ^fabfile\.py
-
 handlers:
 - url: /favicon\.ico
   static_files: app/img/favicon.ico

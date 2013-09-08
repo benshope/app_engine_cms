@@ -1,9 +1,7 @@
 import webapp2
-import cgi
 import os
 import json
 import jinja2
-from google.appengine.api import memcache
 from google.appengine.ext import ndb
 from google.appengine.api import users
 
@@ -26,13 +24,18 @@ class JSON_Handler(webapp2.RequestHandler):
         self.response.out.write(self.render_string(template, kw))
 
     def post(self, url):
+        # Look at the post data
+        # Make sure an entity corresonds with the post data
+        # If an entity doesn't correspond with the post data, create it
+        # Otherwise update the entity with the new post data
         page = Page(parent=ndb.Key('site', url), content = self.request.get('content'))
         page.put()
         self.response.write('HTML Post')
 
     def get(self, url):
-    	page_key = ndb.Key('site', 'page')
-        greetings = Greeting.query_book(ancestor_key).fetch(20)
+    	page_key = ndb.Key('site', url)
+        # page_data = asdfasdf.query_databse(page_key)
+        # Return all this crap formatted as JSON
         self.response.out.write('JSON Get')
 
 app = webapp2.WSGIApplication([('/json/(.*)', JSON_Handler),('/(.*)', HTML_Handler)], debug=True)
