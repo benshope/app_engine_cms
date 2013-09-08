@@ -3,7 +3,7 @@
 var myApp = angular.module('myApp', ['ui.bootstrap'])
 
 myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
-    $routeProvider.when('/', {templateUrl: 'html/home.html', controller: 'HomeController'});
+    $routeProvider.when('/', {templateUrl: 'html/home.html', controller: 'PageController'});
     $routeProvider.when('/login', {templateUrl: 'html/login.html', controller: 'LoginController'});
     $routeProvider.otherwise({redirectTo: '/'});
     $locationProvider.html5Mode(true);
@@ -24,8 +24,8 @@ myApp.controller("LoginController", function($scope, $location, AuthenticationSe
   }
 });
 
-myApp.controller("HomeController", function($scope, AuthenticationService) {
-  $scope.title = "Awesome Home";
+myApp.controller("PageController", function($scope, AuthenticationService) {
+  $scope.title = "Home";
   $scope.message = "Mouse Over these images to see a directive at work!";
 
   $scope.logout = function() {
