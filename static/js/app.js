@@ -3,8 +3,8 @@
 var myApp = angular.module('myApp', ['ui.bootstrap'])
 
 myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
-    $routeProvider.when('/', {templateUrl: 'html/home.html', controller: 'PageController'});
-    $routeProvider.when('/login', {templateUrl: 'html/login.html', controller: 'LoginController'});
+    $routeProvider.when('/', {templateUrl: 'static/html/home.html', controller: 'PageController'});
+    $routeProvider.when('/login', {templateUrl: 'static/html/login.html', controller: 'LoginController'});
     $routeProvider.otherwise({redirectTo: '/'});
     $locationProvider.html5Mode(true);
   }]);
