@@ -49,17 +49,13 @@ myApp.directive("showsMessageWhenHovered", function() {
   };
 });
 
-myApp.factory("AuthenticationService", function($location) {
+myApp.factory("AuthenticationService", function($http, $location) {
   return {
     login: function(credentials) {
-      if (credentials.username !== "ralph" || credentials.password !== "wiggum") {
-        alert("Username must be 'ralph', password must be 'wiggum'");
-      } else {
-        $location.path('/home');
-      }
+      return $http.post("/auth/login", credentials);
     },
     logout: function() {
-      $location.path('/login');
+      return $http.get("/auth/logout");
     }
   };
 });

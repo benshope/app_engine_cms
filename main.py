@@ -9,6 +9,14 @@ class Page(ndb.Model):
   	date = ndb.DateTimeProperty(auto_now_add=True)
 
 class JSON_Handler(webapp2.RequestHandler):
+    def get(self, url):
+        # Return the data for a url formatted as JSON
+
+        # page_key = ndb.Key('site', url)
+        # page_data = asdfasdf.query_databse(page_key)
+        # json.dumps([page.to_dict() for page in Page.query(Page.name == url).fetch()])
+        self.response.out.write('JSON Get')
+
     def post(self, url):
         # Post a the data for a url to the database
 
@@ -16,12 +24,10 @@ class JSON_Handler(webapp2.RequestHandler):
         # page.put()
         self.response.write('JSON Post')
 
+class JSON_Handler(webapp2.RequestHandler):
     def get(self, url):
-        # Return the data for a url formatted as JSON
+        self.response.out.write('Auth Get')
+    def post(self, url):
+        self.response.out.write('Auth Post')
 
-    	# page_key = ndb.Key('site', url)
-        # page_data = asdfasdf.query_databse(page_key)
-        json.dumps([page.to_dict() for page in Page.query(Page.name == url).fetch()])
-        self.response.out.write('JSON Get')
-
-app = webapp2.WSGIApplication([('/json/(.*)', JSON_Handler)], debug=True)
+app = webapp2.WSGIApplication([('/json/(.*)', JSON_Handler), ('/auth/(.*)', Auth_Handler)], debug=True)

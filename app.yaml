@@ -12,6 +12,8 @@ handlers:
   static_dir: static
 - url: /json/.*
   script: main.app
+- url: /auth/.*
+  script: main.app
 - url: .*
   static_files: static/html/index.html
   upload: static/html/index.html
