@@ -12,7 +12,7 @@ handlers:
   static_dir: static
 - url: /json/.*
   script: main.app
-- url: /auth/.*
+- url: /user/.*
   script: main.app
 - url: .*
   static_files: static/html/index.html

@@ -24,10 +24,10 @@ class JSON_Handler(webapp2.RequestHandler):
         # page.put()
         self.response.write('JSON Post')
 
-class JSON_Handler(webapp2.RequestHandler):
+class User_Handler(webapp2.RequestHandler):
     def get(self, url):
-        self.response.out.write('Auth Get')
+        self.response.out.write('User Get')
     def post(self, url):
-        self.response.out.write('Auth Post')
+        self.response.out.write('User Post')
 
-app = webapp2.WSGIApplication([('/json/(.*)', JSON_Handler), ('/auth/(.*)', Auth_Handler)], debug=True)
+app = webapp2.WSGIApplication([('/json/(.*)', JSON_Handler), ('/user/(.*)', User_Handler)], debug=True)
