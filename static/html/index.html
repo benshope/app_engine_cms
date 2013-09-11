@@ -14,25 +14,26 @@
 </head>
 <body>
 
-<div class="navbar">
-  <div class="navbar-inner">
-    <a href="/" class="brand">App Engine CMS</a>
-    <ul class="nav">
-      <li class="active"><a href="/">Home</a></li>
-      <li><a href="/login">Login</a></li>
-    </ul>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="brand">App Engine CMS</a>
+      <ul class="nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<div class="">
-  <div class="large-12">
-    <h1>Introduction to AngularJS</h1>
-    <div id="view" ng-view></div>
+  <div class="">
+    <div class="large-12">
+      <h1>Introduction to AngularJS</h1>
+      <div id="flash" ng-show="flash"></div>
+      <div id="view" ng-view></div>
+    </div>
   </div>
-</div>
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
   <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
-  <script src="/static/js/app.js"></script>
+  <script src="/js/app.js"></script>
 </body>
 </html>

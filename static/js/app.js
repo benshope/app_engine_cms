@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('myApp', ['ui.bootstrap'])
+var myApp = angular.module('myApp', ['ui.bootstrap']);
 
 myApp.config(['$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
     $routeProvider.when('/', {templateUrl: 'html/home.html', controller: 'PageController'});
