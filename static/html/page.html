@@ -4,30 +4,20 @@
 
     <div class="alert-box">{{ message }}</div>
 
-    <div class="">
-      <div class="large-12 columns">
-        <button class="button large expand radius" ng-click="logout()">Log Out</button>
-      </div>
+    <button class="button large expand radius" ng-click="logout()">Log Out</button>
 
-      <form ng-submit="login()">
-      <fieldset class="radius">
-        <div class="">
-          <div class="large-6 columns">
-            <input type="text" name="username" placeholder="username" ng-model="credentials.username" required/>
-          </div>
-            <div class="large-6 columns">
-            <input type="password" name="password" placeholder="password" ng-model="credentials.password" required/>
-          </div>
-        </div>
-
-        <div class="">
-          <div class="large-12 columns">
-            <button type="submit" class="button large expand radius">Log In</button>
-          </div>
-        </div>
-      </fieldset>
+    <form ng-submit="login()">
+      <input type="text" name="username" placeholder="username" ng-model="credentials.username" required/>
+      <input type="password" name="password" placeholder="password" ng-model="credentials.password" required/>
+      <button type="submit">Log In</button>
     </form>
 
-    </div>
+    <form ng-submit="send_json()">
+      <input type="text" name="username" placeholder="username" ng-model="credentials.username" required/>
+      <input type="password" name="password" placeholder="password" ng-model="credentials.password" required/>
+      <button type="submit">Log In</button>
+    </form>
+
+    <div class="editable">Edit me</div>
   </div>
 </div>

@@ -21,8 +21,10 @@ handlers:
 - url: /user/.*
   script: main.app
 - url: .*
-  static_files: static/html/index.html
-  upload: static/html/index.html
+  script: main.app
+# - url: .*
+#   static_files: static/html/index.html
+#   upload: static/html/index.html
 
 libraries:
 - name: webapp2
