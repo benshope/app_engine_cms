@@ -79,7 +79,7 @@ class Mail_Handler(webapp2.RequestHandler):
         name = 'Test Message' #self.request.get('request_name')
         email = 'Ben Shope <nimajnebs@gmail.com>' # self.request.get("email")
         body = 'Test Body' #self.request.get('request_body')
-        mail.send_mail(sender, email, subject, body)
+        mail.send_mail(sender, email, name, body)
 
 app = webapp2.WSGIApplication([
     ('/json/(.*)', JSON_Handler), 
