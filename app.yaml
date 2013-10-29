@@ -18,13 +18,13 @@ handlers:
   static_dir: static/js
 - url: /json/.*
   script: main.app
-- url: /user/.*
+- url: /user
+  script: main.app
+- url: /mail
   script: main.app
 - url: .*
-  script: main.app
-# - url: .*
-#   static_files: static/html/index.html
-#   upload: static/html/index.html
+  static_files: static/html/index.html
+  upload: static/html/index.html
 
 libraries:
 - name: webapp2
