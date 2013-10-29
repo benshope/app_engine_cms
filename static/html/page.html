@@ -2,7 +2,7 @@
   <div class="large-6 large-offset-3">
     <h2>Current URL: {{ url }}</h2>
 
-    <div class="alert-box">{{ message }}</div>
+<!--     <div class="alert-box">{{ message }}</div>
 
     <button class="button large expand radius" ng-click="logout()">Log Out</button>
 
@@ -16,8 +16,11 @@
       <input type="text" name="username" placeholder="username" ng-model="credentials.username" required/>
       <input type="password" name="password" placeholder="password" ng-model="credentials.password" required/>
       <button type="submit">Log In</button>
+    </form> -->
+
+    <form ng-submit="mail()">
+      <button type="submit">Send Email</button>
     </form>
 
-    <div class="editable">Edit me</div>
   </div>
 </div>

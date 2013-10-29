@@ -74,7 +74,7 @@ class User_Handler(webapp2.RequestHandler):
 
 # This class sends mail from the contact form
 class Mail_Handler(webapp2.RequestHandler):
-  def post(self):
+  def get(self):
         sender = 'Ben Shope <nimajnebs@gmail.com>'
         name = 'Test Name' # self.request.get("name")
         email = 'Ben Shope <nimajnebs@gmail.com>' # self.request.get("email")
