@@ -74,12 +74,11 @@ class User_Handler(webapp2.RequestHandler):
 
 # This class sends mail from the contact form
 class Mail_Handler(webapp2.RequestHandler):
-  def get(self):
+  def post(self):
         sender = 'Ben Shope <nimajnebs@gmail.com>'
-        name = 'Test Name' # self.request.get("name")
+        name = self.request.get('request_name')
         email = 'Ben Shope <nimajnebs@gmail.com>' # self.request.get("email")
-        subject = 'Test Message Subject'
-        body = """Test Message Body"""
+        body = self.request.get('request_body')
         mail.send_mail(sender, email, subject, body)
 
 app = webapp2.WSGIApplication([

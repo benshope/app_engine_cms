@@ -18,9 +18,25 @@ app.run(function($rootScope, $location, $anchorScroll, $routeParams) {
 app.controller("PageController", function($scope, $routeParams, $http) {
   $scope.url = $routeParams.url;
   $scope.message = "Example directive";
+  $scope.mail_count = 0;
 
-  $scope.mail = function() {
-    $http.post("/mail");
+  $scope.sendmail = function() {
+
+    // var data = $.param({
+    //     json: JSON.stringify({
+    //         text: 'some text',
+    //         array: [1, 2, 'three'],
+    //         object: {
+    //             par1: 'another text',
+    //             par2: [3, 2, 'one'],
+    //             par3: {}
+    //         }
+    //     }),
+    //     delay: 1
+    // });
+
+    $http.post("/mail", {request_name: "hello", request_body: "hello2"});
+    $scope.mail_count += 1;
   };
 
   $scope.getJSON = function() { };
