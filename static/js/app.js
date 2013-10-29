@@ -21,8 +21,7 @@ app.controller("PageController", function($scope, $routeParams, $http) {
   $scope.mail_count = 0;
 
   $scope.sendmail = function() {
-    // var data = angular.toJson({request_name: "hello", request_body: "hello2"});
-    $http.post("/mail", JSON.stringify({request_name: "hello", request_body: "hello2"}));
+    $http.post("/mail", {request_name: "hello", request_body: "hello2"});
     $scope.mail_count += 1;
   };
 
