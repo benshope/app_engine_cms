@@ -34,8 +34,8 @@ app.controller("PageController", function($scope, $routeParams, $http) {
     //     }),
     //     delay: 1
     // });
-
-    $http.post("/mail", {request_name: "hello", request_body: "hello2"});
+    var data = angular.toJson({request_name: "hello", request_body: "hello2"});
+    $http.post("/mail", data);
     $scope.mail_count += 1;
   };
 
