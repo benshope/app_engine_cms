@@ -33,12 +33,15 @@ class Mail_Handler(webapp2.RequestHandler):
   def post(self):
         body = json.loads(self.request.body)
 
-        origin = destination = 'Ben Shope <nimajnebs@gmail.com>'
+        sender = to = 'nimajnebs@gmail.com'
+        subject = 'Contact Form Message'
 
-        email = body.get('email')
-        name = body.get('name')
-        message = body.get('message')
-        mail.send_mail(origin, destination, name, message)
+        message = '{0} {1} {2}'.format(
+          body.get('name'),
+          body.get('email'),
+          body.get('message'))
+
+        mail.send_mail(sender, to, subject, message)
 
 
 app = webapp2.WSGIApplication([
