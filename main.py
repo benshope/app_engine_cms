@@ -31,15 +31,13 @@ class User_Handler(webapp2.RequestHandler):
 
 class Mail_Handler(webapp2.RequestHandler):
   def post(self):
+        body = json.loads(self.request.body)
 
-        print "self.request.body:  " + self.request.body
-        print "self.request.POST.get:  " + self.request.get('body')
+        origin = destination = 'Ben Shope <nimajnebs@gmail.com>'
 
-        origin = 'Ben Shope <nimajnebs@gmail.com>'
-        destination = 'Ben Shope <nimajnebs@gmail.com>'
-        email = self.request.POST.get('request_email')
-        name = self.request.POST.get('request_name')
-        message = self.request.POST.get('request_body')
+        email = body.get('email')
+        name = body.get('name')
+        message = body.get('message')
         mail.send_mail(origin, destination, name, message)
 
 
