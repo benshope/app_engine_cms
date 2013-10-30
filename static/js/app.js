@@ -21,7 +21,7 @@ app.controller("PageController", function($scope, $routeParams, $http) {
   $scope.mail_count = 0;
 
   $scope.contact = function() {
-    $http.post("/mail", {'request_name': 'AT Name', 'request_body': 'AT Body'});
+    $http.post("/mail", {request_name: 'AT Name', request_body: 'AT Body'});
     $scope.mail_count += 1;
   };
 
@@ -35,7 +35,6 @@ app.controller("PageController", function($scope, $routeParams, $http) {
   //   User.logout();
   // };
 });
-
 
 // app.factory("User", function($http, $location) {
 //   return {
