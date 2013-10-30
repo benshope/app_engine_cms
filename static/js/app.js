@@ -21,7 +21,7 @@ app.controller("PageController", function($scope, $routeParams, $http) {
   $scope.mail_count = 0;
 
   $scope.contact = function() {
-    $http.post("/mail", {name: 'Test Name', email: 'Test Email' message: 'Test Body'});
+    $http.post("/mail", {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
     $scope.mail_count += 1;
   };
 

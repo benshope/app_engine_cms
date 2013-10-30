@@ -6,9 +6,11 @@ Google App Engine CMS is a reimagining of the simple CMS - built fast, flexible,
 
 For some developers, this CMS will just save them time they would spend construcing things like pages, posts, users, comments, and a contact form for a simple website.
 
-For other developers, the main benefit of this CMS will be as a best-practices boilerplate - a starting-point to create amazing web experiences with AngularJS and WebApp2.
+For other developers, the main benefit of this CMS will be as a best-practices boilerplate - a starting-point to create amazing web experiences with AngularJS, Google App Engine, and diverse APIs.
+
 
 ## Technologies
++  Google Blogger API - gives you pre-built user management, posts, pages, comments, and data security
 + [WebApp2](http://twitter.github.com/bootstrap/) Back-End Web Server
 + [Angular JS](http://twitter.github.com/bootstrap/) Front-End Javascript Framework
 + [Twitter Bootstrap](http://twitter.github.com/bootstrap/) CSS Framework
