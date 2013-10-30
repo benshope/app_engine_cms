@@ -16,10 +16,6 @@ handlers:
   static_dir: static/img
 - url: /js
   static_dir: static/js
-- url: /json/.*
-  script: main.app
-- url: /user
-  script: main.app
 - url: /mail
   script: main.app
 - url: .*
