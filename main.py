@@ -76,9 +76,9 @@ class User_Handler(webapp2.RequestHandler):
 class Mail_Handler(webapp2.RequestHandler):
   def post(self):
         sender = 'Ben Shope <nimajnebs@gmail.com>'
-        name = self.request.get('request_name')
+        name = self.request.post('request_name')
         email = 'Ben Shope <nimajnebs@gmail.com>' # self.request.get("email")
-        body = self.request.get('request_body')
+        body = self.request.post('request_body')
         mail.send_mail(sender, email, name, body)
 
 app = webapp2.WSGIApplication([
