@@ -1,6 +1,6 @@
 ## App Engine CMS (In Progress)
 
-I love Wordpress, but it has some serious limitations.
+I love Wordpress, but it has limitations.
 
 Google App Engine CMS is a re-thinking of the simple CMS - built fast, flexible, and scalable.
 
