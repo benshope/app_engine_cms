@@ -13,11 +13,15 @@ class Database(webapp2.RequestHandler):
 
 class Contact(webapp2.RequestHandler):
     def post(self):
-        mail.send_mail(sender="Ben Shope <nimajnebs@gmail.com>", to="Ben Shope <nimajnebs@gmail.com>", subject="BenShope Contact Form Message", body="From: {0} | {1} \nMessage: {2}".format(self.request.get('name'), self.request.get('email'), self.request.get('message')))
+        data = [self.request.get(x) for x in ['name', 'email', 'message']]
+        mail.send_mail(sender=data[1], 
+            to='nimajnebs@gmail.com', 
+            subject='Contact Form Message', 
+            body='From: {} | {} \nMessage: {}'.format(*data))
         self.response.out.write('Thanks!  Your message has been sent.')
 
 app = webapp2.WSGIApplication([
-  ('/login', Login), 
-  ('/mail', Contact), 
+  ('/login', Login),
+  ('/contact', Contact),
   ('/database', Database)
 ])
