@@ -3,22 +3,13 @@ import os
 import json
 import cgi
 import urllib
-from google.appengine.ext import ndb
-from google.appengine.api import users
 from google.appengine.api import mail
 
-class Mail_Handler(webapp2.RequestHandler):
-  def post(self):
-        body = json.loads(self.request.body)
+class SendMail(webapp2.RequestHandler):
+    def post(self):
+        mail.send_mail(sender="Ben Shope <nimajnebs@gmail.com>", to="Ben Shope <nimajnebs@gmail.com>", subject="BenShope Contact Form Message", body="From: {0} | {1} \nMessage: {2}".format(self.request.get('name'), self.request.get('email'), self.request.get('message')))
+        self.response.out.write('Thanks!  Your message has been sent.')
 
-        sender = to = 'nimajnebs@gmail.com'
-        subject = 'Contact Form Message'
-
-        message = '{0} {1} {2}'.format(
-          body.get('name'),
-          body.get('email'),
-          body.get('message'))
-
-        mail.send_mail(sender, to, subject, message)
-
-app = webapp2.WSGIApplication([('/mail', Mail_Handler)], debug=True)
+app = webapp2.WSGIApplication([
+  ('/mail', SendMail)
+])
