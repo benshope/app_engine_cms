@@ -3,22 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>App Engine CMS</title>
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="static/img/favicon.png">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link href="css.css" rel="stylesheet">
+    <link href="static/css.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="static/js.js"></script>
   </head>
 
-  <body>
-
-
-    <!-- JAVASCRIPT -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="js.js"></script>
+  <body ng-controller="Ctrl">
+    MY NEW SITE :D {{url}}
   </body>
 </html>
