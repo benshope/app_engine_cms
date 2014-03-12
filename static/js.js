@@ -1,15 +1,12 @@
 
-var app = angular.module('app',[]);
+var app = angular.module('app', ['ui.bootstrap']);
 
 app.controller('Ctrl', function($scope, $http, $window) {
   $scope.url = $window.location.pathname;
 
   $scope.contact = function() {
-    $http.post('/mail', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
+    $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
   };
-
-  $scope.getJSON = function() { };
-  $scope.postJSON = function() { };
 
   // $scope.login = function() {
   //   User.login($scope.credentials);

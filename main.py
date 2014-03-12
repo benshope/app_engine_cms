@@ -1,6 +1,7 @@
 import webapp2
 import os
 import cgi
+import json
 import urllib
 from google.appengine.ext import ndb
 from google.appengine.api import users
@@ -23,8 +24,9 @@ class Database(webapp2.RequestHandler):
 
 class Contact(webapp2.RequestHandler):
     def post(self):
-        data = [self.request.get(x) for x in ['name', 'email', 'message']]
-        mail.send_mail(sender=data[1], 
+        json_data = json.loads(self.request.body)
+        data = [json_data.get(x) for x in ['name', 'email', 'message']]
+        mail.send_mail(sender='nimajnebs@gmail.com', 
             to='nimajnebs@gmail.com', 
             subject='Contact Form Message', 
             body='From: {} \nEmail: {} \nMessage: {}'.format(*data))
