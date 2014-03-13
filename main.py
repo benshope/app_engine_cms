@@ -1,11 +1,19 @@
 import webapp2
-import os
 import cgi
-import json
 import urllib
+import json
 from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import mail
+
+class Page(ndb.Model):
+  content = ndb.StringProperty()
+  date = ndb.DateTimeProperty(auto_now_add=True)
+
+  @classmethod
+  def query_page(cls, ancestor_key):
+    return cls.query(ancestor=ancestor_key).order(-cls.date)
+
 
 class Login(webapp2.RequestHandler):
     def get(self):
