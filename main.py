@@ -7,16 +7,22 @@ from google.appengine.api import users
 from google.appengine.api import mail
 
 class Site(ndb.Model):
-  site = ndb.StringProperty()
+  site = ndb.JsonProperty()
 
 class Database(webapp2.RequestHandler):
     def get(self):
-        ndb.Key(Site, 'data').get()
+        self.response.headers['Content-Type'] = 'application/json'
+        property = ndb.Key(Site, 'data').get()
+        self.response.out.write(json.dumps(property))
     def post(self):
-        old_data = ndb.Key(Site, 'data').get()
-        new_data = json.loads(self.request.body).get('content')
+        Site.query()[0]
+
+        key = ndb.Key(Site, 'data')
+        data = key.get()
+        new_json = json.loads(self.request.body).get('content')
         old_data.site = new_data
         Site(content = content).put()
+        data.put()
 
 class Login(webapp2.RequestHandler):
     def get(self):
@@ -26,7 +32,6 @@ class Login(webapp2.RequestHandler):
             self.response.write('You are logged in: ' + user.nickname())
         else:
             self.redirect(users.create_login_url(self.request.uri))
-
 
 class Contact(webapp2.RequestHandler):
     def post(self):
