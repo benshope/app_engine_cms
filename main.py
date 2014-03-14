@@ -6,14 +6,17 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import mail
 
-class Page(ndb.Model):
-  content = ndb.StringProperty()
-  date = ndb.DateTimeProperty(auto_now_add=True)
+class Site(ndb.Model):
+  site = ndb.StringProperty()
 
-  @classmethod
-  def query_page(cls, ancestor_key):
-    return cls.query(ancestor=ancestor_key).order(-cls.date)
-
+class Database(webapp2.RequestHandler):
+    def get(self):
+        ndb.Key(Site, 'data').get()
+    def post(self):
+        old_data = ndb.Key(Site, 'data').get()
+        new_data = json.loads(self.request.body).get('content')
+        old_data.site = new_data
+        Site(content = content).put()
 
 class Login(webapp2.RequestHandler):
     def get(self):
@@ -24,11 +27,6 @@ class Login(webapp2.RequestHandler):
         else:
             self.redirect(users.create_login_url(self.request.uri))
 
-class Database(webapp2.RequestHandler):
-    def get(self):
-        url = self.request.get('url')
-    def post(self):
-        url = self.request.get('url')
 
 class Contact(webapp2.RequestHandler):
     def post(self):

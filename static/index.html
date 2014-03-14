@@ -14,12 +14,26 @@
 
 <body ng-controller="Ctrl">
 
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Admin Bar</a>
+    </div>
 
-  WEBSITE BODY TEXT {{url}}  <a href="" ng-click="contact()">Send Contact</a>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Save</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
+<h3>VIEW GOES HERE</h3>
+<div ng-bind-html="expression"></div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
-  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.min.js"></script>
-  <script src="static/js.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.min.js"></script>
+<script src="static/js.js"></script>
+
 </body>
 </html>
