@@ -17,19 +17,31 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Admin Bar</a>
+      <a class="navbar-brand">Admin Bar</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Save</a></li>
+        <li><a href="#" ng-click="contact()">Contact</a></li>
+        <li><a href="#" ng-click="get_data()">Get Data</a></li>
+        <li><a href="#" ng-click="post_data()">Post Data</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
+
+<div contenteditable ng-model="editable">true</div>
+
+<div contenteditable="{{editable}}" ng-model="content">Editable</div>
+
+Content: {{content}}
+
+
+
 
 <h3>VIEW GOES HERE</h3>
 <div ng-bind-html="expression"></div>
+{{content}}
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.min.js"></script>

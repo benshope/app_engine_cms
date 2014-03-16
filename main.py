@@ -6,24 +6,16 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 from google.appengine.api import mail
 
-
 class Storage(ndb.Model):
-    # content  = ndb.JsonProperty()
-    content  = ndb.StringProperty()
+    content  = ndb.TextProperty()
 
-class Access(webapp2.RequestHandler):
+class Database(webapp2.RequestHandler):
     def get(self):
-        # entity = ndb.Key(Storage, 'all').get()
-        # self.response.headers['Content-Type'] = 'application/json'
-        # self.response.out.write(json.dumps(entity))
-        entity = ndb.Key(Storage, 'all').get()
-        self.response.headers['Content-Type'] = 'application/json'
-        self.response.out.write(json.dumps(entity))
+        entity = Storage.get_by_id('content')
+        self.response.out.write(entity.content)
     def post(self):
         content = json.loads(self.request.body).get('content')
-        entity = ndb.Key(Storage, 'all').get()
-        if not entity:
-            entity = Storage(content='')
+        entity = Storage.get_or_insert('content')
         entity.content = content
         entity.put()
 
@@ -31,7 +23,7 @@ class Login(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         if user:
-            self.response.write('You are logged in: ' + user.nickname())
+            self.response.write('You are logged in as ' + user.nickname())
         else:
             self.redirect(users.create_login_url(self.request.uri))
 
@@ -48,5 +40,5 @@ class Contact(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
   ('/login', Login),
   ('/contact', Contact),
-  ('/access', Access)
+  ('/database', Database)
 ])
