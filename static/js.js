@@ -1,9 +1,15 @@
 
 var app = angular.module('app', ['ui.bootstrap']);
 
-app.controller('Ctrl', function($scope, $http, $window) {
+app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.url = $window.location.pathname;
-  $scope.content = 'CONTENT ORIGINALLY ENTERED HERE';
+  $scope.html_mode = true;
+
+  $scope.ddata = {someString:'', trustedVersion:''}
+  $scope.$watch('ddata.someString', function(newVal) {
+        debugger;
+        $scope.ddata.trustedVersion = $sce.trustAsHtml(newVal);
+  }, true);
 
   $scope.contact = function() {
     $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
