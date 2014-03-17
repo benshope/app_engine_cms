@@ -31,12 +31,16 @@
   </div>
 </nav>
 
-
-<h3>HTML EDITOR</h3>
-<input type="text" ng-model="ddata.someString"/><br>
-<h3>VISUAL EDITOR</h3>
-<div contenteditable ng-model='ddata.someString'></div>
-
+<div class="flex expand">
+  <div class="padded">
+    <h3>VISUAL</h3>
+    <div class="border" contenteditable ng-model='html_string'></div>
+  </div>
+  <div class="padded">
+    <h3>TEXT</h3>
+    <textarea ng-model="html_string"/></textarea><br>
+  </div>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.min.js"></script>

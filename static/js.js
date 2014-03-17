@@ -5,11 +5,14 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.url = $window.location.pathname;
   $scope.html_mode = true;
 
-  $scope.ddata = {someString:'', trustedVersion:''}
-  $scope.$watch('ddata.someString', function(newVal) {
-        debugger;
-        $scope.ddata.trustedVersion = $sce.trustAsHtml(newVal);
-  }, true);
+  $scope.html_string = '';
+  // $scope.html_string = {html:'', visual:''};
+  // $scope.$watch('html_string.html', function(html) {
+  //       $scope.html_string.visual = $sce.trustAsHtml(newVal);
+  // }, true);
+  // $scope.$watch('html_string.visual', function(visual) {
+  //       $scope.html_string.escaped = $sce.trustAsHtml(visual);
+  // }, true);
 
   $scope.contact = function() {
     $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
