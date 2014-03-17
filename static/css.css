@@ -7,4 +7,4 @@ html, body { width: 100%; height:100%; }
 .flex { display: flex; }
 .flex > * { flex: 1; }
 .col { flex-direction: column; }
-.bg-one {background: #f2f2f2;}
+.bg-gray {background: #f2f2f2;}
