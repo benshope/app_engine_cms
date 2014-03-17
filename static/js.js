@@ -4,6 +4,7 @@ var app = angular.module('app', ['ui.bootstrap']);
 app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.url = $window.location.pathname;
   $scope.html_mode = true;
+  $scope.editable = true;
 
   $scope.html_string = '';
   // $scope.html_string = {html:'', visual:''};

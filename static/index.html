@@ -17,28 +17,29 @@
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">Admin Bar</a>
+      <a class="navbar-brand">Batteries Included</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" ng-click="editable = !editable">Toggle Editable</a></li>
-        <li><a href="#" ng-click="contact()">Contact</a></li>
-        <li><a href="#" ng-click="get_data()">Get Data</a></li>
-        <li><a href="#" ng-click="post_data()">Post Data</a></li>
+        <li><a href="#" ng-click="get_data()"><i class="fa fa-cloud-download"></i></a></li>
+        <li><a href="#" ng-click="post_data()"><i class="fa fa-cloud-upload"></i></a></li>
+        <li><a href="#" ng-click="editable = !editable"><i class="fa fa-edit"></i></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="flex expand">
-  <div class="padded">
-    <h3>VISUAL</h3>
-    <div class="border" contenteditable ng-model='html_string'></div>
+<div class="expand flex">
+  <div>
+    <div class="bg-one" contenteditable ng-model='html_string'>
+    <h1>This is a title</h1>
+
+
+    </div>
   </div>
-  <div class="padded">
-    <h3>TEXT</h3>
-    <textarea ng-model="html_string"/></textarea><br>
+  <div ng-show="editable">
+    <textarea class="border expand padded" ng-model="html_string"></textarea>
   </div>
 </div>
 
