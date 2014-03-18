@@ -11,15 +11,23 @@ textarea:focus, div:focus { outline: none; }
 #header > *:hover { color: white; background-color: #c0c0c0; }
 #visual { background-color: lightblue; }
 #text {
+  position:fixed;
+  float: right;
+  right:0px;
+  z-index: 5;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
   border:1px dashed gray; 
   padding: 10px 15px;
 }
 
 .flex { 
+  width: 100%; height:100%;
   display: flex;
   align-content: stretch;
   align-items: stretch; 
 }
-.flex > * { flex: 1 1 50%; }
+.flex > * { flex: 1 100%; }
 .col { flex-flow: column; flex-direction: column; }
 .expand { width: 100%; height: 100%; }

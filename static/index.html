@@ -20,6 +20,7 @@
 <div class="flex">
     <div id="visual" contenteditable ng-model='html_string'>
 
+<textarea id="text" ng-show="text_edit" class="border padded" ng-model="html_string"></textarea>
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -37,8 +38,8 @@
 </nav>
 
 
-</div>
-    <textarea id="text" ng-show="text_edit" class="border padded" ng-model="html_string"></textarea>
+    </div>
+    <div ng-show="text_edit"></div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
