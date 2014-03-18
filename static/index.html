@@ -17,15 +17,16 @@
 <div id="header">
   <i ng-click="text_edit = !text_edit" class="fa fa-columns"></i>
 </div>
-<div class="flex">
-    <div id="visual" contenteditable ng-model='html_string'>
 
 <textarea id="text" ng-show="text_edit" class="border padded" ng-model="html_string"></textarea>
+
+<div class="flex">
+    <div id="visual" contenteditable ng-model='html_string'>
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand"><i class="fa fa-square-o"></i>&nbsp;Site Title</a>
+      <a class="navbar-brand"><i class="fa fa-bolt"></i>&nbsp; Site Title</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,6 +37,9 @@
     </div>
   </div>
 </nav>
+
+<line> the content in a line section is replaced in sub-pages by a simple string</line>
+<page>the content in a page section is replaced in sub-pages by a multi-line text area</page>
 
 
     </div>
