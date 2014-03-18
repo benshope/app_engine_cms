@@ -14,33 +14,31 @@
 
 <body ng-controller="Ctrl">
 
+<div id="header">
+  <i ng-click="text_edit = !text_edit" class="fa fa-columns"></i>
+</div>
+<div class="flex">
+    <div id="visual" contenteditable ng-model='html_string'>
+
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">Batteries Included</a>
+      <a class="navbar-brand"><i class="fa fa-square-o"></i>&nbsp;Site Title</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" ng-click="get_data()"><i class="fa fa-cloud-download"></i></a></li>
         <li><a href="#" ng-click="post_data()"><i class="fa fa-cloud-upload"></i></a></li>
-        <li><a href="#" ng-click="editable = !editable"><i class="fa fa-edit"></i></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="expand flex">
-  <div>
-    <div contenteditable ng-model='html_string'>
-    <h1>This is a title</h1>
 
-
-    </div>
-  </div>
-  <div ng-show="editable">
-    <textarea class="border expand padded" ng-model="html_string"></textarea>
-  </div>
+</div>
+    <textarea id="text" ng-show="text_edit" class="border padded" ng-model="html_string"></textarea>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>

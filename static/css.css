@@ -1,10 +1,25 @@
 html, body { width: 100%; height:100%; }
+textarea:focus, div:focus { outline: none; }
 
-.navbar { margin-bottom: 0px; }
-.expand, textarea { width: 100%; height: 100%;}
-.border { border:1px dashed gray; border-radius:4px; }
-.padded { padding: 1%; }
-.flex { display: flex; }
-.flex > * { flex: 1; }
-.col { flex-direction: column; }
-.bg-gray {background: #f2f2f2;}
+#header { 
+  position:fixed;
+  z-index: 1000;
+  right: 0px;
+  background-color: #f2f2f2;
+}
+#header > * { display: inline-block; padding: 15px 15px; }
+#header > *:hover { color: white; background-color: #c0c0c0; }
+#visual { background-color: lightblue; }
+#text {
+  border:1px dashed gray; 
+  padding: 10px 15px;
+}
+
+.flex { 
+  display: flex;
+  align-content: stretch;
+  align-items: stretch; 
+}
+.flex > * { flex: 1 1 50%; }
+.col { flex-flow: column; flex-direction: column; }
+.expand { width: 100%; height: 100%; }
