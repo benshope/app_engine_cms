@@ -1,11 +1,69 @@
 
 var app = angular.module('app', ['ui.bootstrap']);
 
+app.config(function($routeProvider) {
+    $routeProvider.
+      when('/', {controller:ListCtrl, templateUrl:'list.html'}).
+      when('/edit/:projectId', {controller:EditCtrl, templateUrl:'detail.html'}).
+      when('/new', {controller:CreateCtrl, templateUrl:'detail.html'}).
+      otherwise({redirectTo:'/'});
+  });
+
+// app.config(function ($stateProvider, $urlRouterProvider) {
+//   var home = {
+//           name: 'home',
+//           url: '/',
+//           templateUrl: 'content.html'
+//       },
+//       red = {
+//           name: 'red',
+//           url: '/red',
+//           parent: home,
+//           templateUrl: 'content.red.html'
+//       },
+//       blue = {
+//           name: 'blue',
+//           url: '/blue',
+//           parent: home,
+//           templateUrl: 'content.blue.html'
+//       },
+//       green = {
+//           name: 'green',
+//           url: '/green',
+//           parent: home,
+//           templateUrl: 'content.green.html'
+//       };
+
+//   $stateProvider.state(home);
+//   $stateProvider.state(red);
+//   $stateProvider.state(green);
+//   $stateProvider.state(blue);
+// });
+
+
+
 app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.url = $window.location.pathname;
   $scope.text_edit = true;
-
   $scope.html_string = '';
+
+  $scope.site_html = {
+    html: ['header <page name="content"> hero unit, some text </page> footer'],
+    page: {
+      html: ['<line name="page_title"></line><page name="page_content"></page> '],
+      contact: ['contact page data'],
+    },
+    blog: ['blog template'],
+    post: {
+      html: ['post template'],
+      myfirstpost: ['first post content'],
+      mysecondpost: ['second post content']
+    }
+  };
+
+  $scope.page_url = {  };
+  $scope.page_html = {  };
+
   // $scope.html_string = {html:'', visual:''};
   // $scope.$watch('html_string.html', function(html) {
   //       $scope.html_string.visual = $sce.trustAsHtml(newVal);
