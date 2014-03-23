@@ -1,68 +1,47 @@
 
 var app = angular.module('app', ['ui.bootstrap']);
 
-app.config(function($routeProvider) {
-    $routeProvider.
-      when('/', {controller:ListCtrl, templateUrl:'list.html'}).
-      when('/edit/:projectId', {controller:EditCtrl, templateUrl:'detail.html'}).
-      when('/new', {controller:CreateCtrl, templateUrl:'detail.html'}).
-      otherwise({redirectTo:'/'});
-  });
-
-// app.config(function ($stateProvider, $urlRouterProvider) {
-//   var home = {
-//           name: 'home',
-//           url: '/',
-//           templateUrl: 'content.html'
-//       },
-//       red = {
-//           name: 'red',
-//           url: '/red',
-//           parent: home,
-//           templateUrl: 'content.red.html'
-//       },
-//       blue = {
-//           name: 'blue',
-//           url: '/blue',
-//           parent: home,
-//           templateUrl: 'content.blue.html'
-//       },
-//       green = {
-//           name: 'green',
-//           url: '/green',
-//           parent: home,
-//           templateUrl: 'content.green.html'
-//       };
-
-//   $stateProvider.state(home);
-//   $stateProvider.state(red);
-//   $stateProvider.state(green);
-//   $stateProvider.state(blue);
-// });
+// This needs to accept multi-level routes
+// $routeProvider.when('/:name', { templateUrl: 'index.html', controller: Ctrl });
 
 
-
+//, $route, $routeParams, $compile
 app.controller('Ctrl', function($scope, $sce, $http, $window) {
+
+  // $route.current.templateUrl = 'partials/' + $routeParams.name + ".html";
+  // $http.get($route.current.templateUrl).then(function (msg) {
+  //   $('#views').html($compile(msg.data)($scope));
+  // });
+
   $scope.url = $window.location.pathname;
   $scope.text_edit = true;
   $scope.html_string = '';
 
-  $scope.site_html = {
-    html: ['header <page name="content"> hero unit, some text </page> footer'],
-    page: {
-      html: ['<line name="page_title"></line><page name="page_content"></page> '],
-      contact: ['contact page data'],
-    },
-    blog: ['blog template'],
-    post: {
-      html: ['post template'],
-      myfirstpost: ['first post content'],
-      mysecondpost: ['second post content']
-    }
-  };
+  // $scope.current_html = function() { };
 
-  $scope.page_url = {  };
-  $scope.page_html = {  };
+  // Direct all routes to this controller
+  // Get all url parameters as nested template names
+  // If a template level does not exist, look at it's parent, and create it
+  // If a template does exist, place it into it's parent
+
+  // Add a timeout function that:
+  // Looks at all templates, and deletes any children without parent tags
+  // Looks at all templates, and adds an empty string for parent tags
+
+  // $scope.templates = {
+  //   root: 'header <page html> home text </page> footer',
+  //   page: {
+  //     html: ['<line title></line><page html></page>'],
+  //     contact: { title: 'contact title',
+  //                html: 'contact body']
+  //   },
+  //   blog: ['blog template'],
+  //   post: {
+  //     html: ['post template'],
+  //     myfirstpost: ['first post content'],
+  //     mysecondpost: ['second post content']
+  //   }
+  // };
 
   // $scope.html_string = {html:'', visual:''};
   // $scope.$watch('html_string.html', function(html) {

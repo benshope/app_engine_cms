@@ -18,13 +18,17 @@
   <i ng-click="text_edit = !text_edit" class="fa fa-columns"></i>
 </div>
 
-<textarea id="text" ng-show="text_edit" class="border padded" ng-model="html_string"></textarea>
+<!-- BEGIN INSERTED SECTION --> 
+
+<!-- TEXTAREA:  ng-repeat="child in template_children" -->
+<textarea  id="text" ng-show="text_edit" class="border padded" ng-model="html_string"> </textarea>
 
 <div class="flex">
+    <!-- FOR THIS PART, ADD THE CHILD STRINGS FORMATTED
+    INTO ALL PARENT TEMPLATES - WITH A CONTENTEDITABLE 
+    DIV WRAPPED AROUND EACH CHILD AREA -->
     <div id="visual" contenteditable ng-model='html_string'>
-      <div ui-view></div>
 
-      
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -43,7 +47,6 @@
 <line name="title"> the content in a line section is replaced in sub-pages by a simple string</line>
 <page>the content in a page section is replaced in sub-pages by a multi-line text area</page>
 
-
     </div>
     <div ng-show="text_edit"></div>
 </div>
@@ -51,7 +54,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> -->
 <script src="static/js.js"></script>
 
 </body>
