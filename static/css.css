@@ -46,7 +46,7 @@ textarea:focus, div:focus { outline: none; }
 .inactive:hover { background: rgba(0,0,0,0.4); color: white; }
 .active { 
   border: 1px solid green;
-  background: rgba(256,256,256,0.2); 
+  background: rgba(256,256,256,0.6); 
   color: green; 
 }
 .active:hover { 
