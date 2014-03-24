@@ -18,20 +18,24 @@
 <!-- <i id="New_URL" class="fa fa-files-o"></i>
   <i id="Upload_JSON" class="fa fa-cloud-upload"></i>
   <i id="Sign_Out" class="fa fa-sign-out"></i> -->
-  <i ng-click="show_html = !show_html" class="fa fa-bold"></i>
+  <!-- <i ng-click="show_html = !show_html" class="fa fa-bold"></i> -->
 
 </div>
 
 <div class="header right">
-  <i ng-show="show_html" ng-click="show_parent_html = !show_parent_html" class="fa fa-bars {{show_parent_html ? 'active' : '' }}"></i>
-  <i ng-click="show_html = !show_html" class="fa fa-columns {{show_html ? 'active' : '' }}"></i>
+  <i ng-show="show_html" ng-click="show_parent_html = !show_parent_html" class="fa fa-bars {{show_parent_html ? 'active' : 'inactive' }}"></i>
+  <i ng-click="show_html = !show_html" class="fa fa-columns {{show_html ? 'active' : 'inactive' }}"></i>
 </div>
 
-<textarea  ng-repeat="html_string in html_strings" class="text" ng-show="show_html" class="border padded" ng-model="html_string"></textarea>
-
 <div class="flex">
-  <div class="visual" ng-repeat="html_string in html_strings" contenteditable ng-model='html_string'></div>
-  <div ng-show="show_html"></div>
+  <div class="visual">
+    <div ng-repeat="(x, html_string) in html_strings">
+      <div contenteditable ng-model='html_string'></div>
+    </div>
+  </div>
+  <div class="text flex col" ng-show="show_html">
+    <textarea  ng-repeat="(x, html_string) in html_strings" ng-show="show_html" class="border padded bg-{{x}}" ng-model="html_string"></textarea>
+  </div>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
