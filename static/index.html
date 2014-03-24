@@ -14,47 +14,29 @@
 
 <body ng-controller="Ctrl">
 
-<div id="header">
-  <i ng-click="text_edit = !text_edit" class="fa fa-columns"></i>
+<div class="header left">
+<!-- <i id="New_URL" class="fa fa-files-o"></i>
+  <i id="Upload_JSON" class="fa fa-cloud-upload"></i>
+  <i id="Sign_Out" class="fa fa-sign-out"></i> -->
+  <i ng-click="show_html = !show_html" class="fa fa-bold"></i>
+
 </div>
 
-<!-- BEGIN INSERTED SECTION --> 
+<div class="header right">
+  <i ng-show="show_html" ng-click="show_parent_html = !show_parent_html" class="fa fa-bars {{show_parent_html ? 'active' : '' }}"></i>
+  <i ng-click="show_html = !show_html" class="fa fa-columns {{show_html ? 'active' : '' }}"></i>
+</div>
 
-<!-- TEXTAREA:  ng-repeat="child in template_children" -->
-<textarea  id="text" ng-show="text_edit" class="border padded" ng-model="html_string"> </textarea>
+<textarea  ng-repeat="html_string in html_strings" class="text" ng-show="show_html" class="border padded" ng-model="html_string"></textarea>
 
 <div class="flex">
-    <!-- FOR THIS PART, ADD THE CHILD STRINGS FORMATTED
-    INTO ALL PARENT TEMPLATES - WITH A CONTENTEDITABLE 
-    DIV WRAPPED AROUND EACH CHILD AREA -->
-    <div id="visual" contenteditable ng-model='html_string'>
-
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand"><i class="fa fa-bolt"></i>&nbsp; Site Title</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" ng-click="get_data()"><i class="fa fa-cloud-download"></i></a></li>
-        <li><a href="#" ng-click="post_data()"><i class="fa fa-cloud-upload"></i></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<line name="title"> the content in a line section is replaced in sub-pages by a simple string</line>
-<page>the content in a page section is replaced in sub-pages by a multi-line text area</page>
-
-    </div>
-    <div ng-show="text_edit"></div>
+  <div class="visual" ng-repeat="html_string in html_strings" contenteditable ng-model='html_string'></div>
+  <div ng-show="show_html"></div>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> -->
 <script src="static/js.js"></script>
 
 </body>

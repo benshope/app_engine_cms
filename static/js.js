@@ -4,7 +4,6 @@ var app = angular.module('app', ['ui.bootstrap']);
 // This needs to accept multi-level routes
 // $routeProvider.when('/:name', { templateUrl: 'index.html', controller: Ctrl });
 
-
 //, $route, $routeParams, $compile
 app.controller('Ctrl', function($scope, $sce, $http, $window) {
 
@@ -14,8 +13,10 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   // });
 
   $scope.url = $window.location.pathname;
-  $scope.text_edit = true;
-  $scope.html_string = '';
+  $scope.show_html = true;
+  $scope.show_parent_html = true;
+
+  $scope.html_strings = ['first', 'second', 'third'];
 
   // $scope.current_html = function() { };
 
