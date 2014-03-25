@@ -16,6 +16,7 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.logged_in = true;
   $scope.show_html = true;
   $scope.show_parent_html = true;
+  $scope.tint = false;
 
   $scope.html_strings = {0:'first', 1:'second', 2:'third'};
 
