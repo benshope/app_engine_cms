@@ -18,7 +18,55 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.show_parent_html = true;
   $scope.tint = false;
 
-  $scope.html_strings = {0:'first', 1:'second', 2:'third'};
+  $scope.html_strings = {1:'second', 2:'third'};
+
+  $scope.contact = function() {
+    $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
+  };
+
+  $scope.get_content = function() { $scope.server = $http.get('/database'); };
+  $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
+
+  $scope.load_page = function() {
+    $scope.html_strings[0] = '<b>ldskfjsldkfj</b>';
+  };
+
+});
+
+
+app.directive('contenteditable', function() {
+    return {
+      restrict: 'A',
+      require: '?ngModel',
+      link: function(scope, element, attrs, ngModel) {
+        if(!ngModel) return;
+        ngModel.$render = function() { element.html(ngModel.$viewValue || ''); };
+        element.on('blur keyup change', function() { scope.$apply(read); });
+        read();
+        function read() {
+          var html = element.html();
+          if( attrs.stripBr && html == '<br>' ) { html = ''; }
+          ngModel.$setViewValue(html);
+        }
+      }
+    };
+  });
+
+
+
+
+
+
+  // $scope.login = function() {
+  //   User.login($scope.credentials);
+  // };
+  // $scope.logout = function() {
+  //   User.logout();
+  // };
+
+
+
+
 
   // $scope.current_html = function() { };
 
@@ -54,39 +102,15 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   //       $scope.html_string.escaped = $sce.trustAsHtml(visual);
   // }, true);
 
-  $scope.contact = function() {
-    $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
-  };
-
-  $scope.get_content = function() { $scope.server = $http.get('/database'); };
-  $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
-
-  // $scope.login = function() {
-  //   User.login($scope.credentials);
-  // };
-  // $scope.logout = function() {
-  //   User.logout();
-  // };
-});
 
 
-app.directive('contenteditable', function() {
-    return {
-      restrict: 'A',
-      require: '?ngModel',
-      link: function(scope, element, attrs, ngModel) {
-        if(!ngModel) return;
-        ngModel.$render = function() { element.html(ngModel.$viewValue || ''); };
-        element.on('blur keyup change', function() { scope.$apply(read); });
-        read();
-        function read() {
-          var html = element.html();
-          if( attrs.stripBr && html == '<br>' ) { html = ''; }
-          ngModel.$setViewValue(html);
-        }
-      }
-    };
-  });
+
+
+
+
+
+
+
 
 
 // app.factory('User', function($http, $location) {

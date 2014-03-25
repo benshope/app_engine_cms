@@ -7,7 +7,7 @@ textarea:focus, div:focus { outline: none; }
   z-index: 1000;
 }
 .header > * { 
-  border: 1px solid gray; 
+  border: 1px solid gray;
   color: gray; 
   display: inline-block; 
   padding: 15px 15px; 
@@ -18,7 +18,7 @@ textarea:focus, div:focus { outline: none; }
 .right { right: 0px; }
 .right > * { margin-left: -5px; }
 
-.visual { background-color: lightblue; }
+/*.visual { background-color: lightblue; }*/
 .text {
   position:fixed;
   float: right;
@@ -55,7 +55,11 @@ textarea:focus, div:focus { outline: none; }
   color: 404040; 
 }
 
-.bg-0 { background: yellow; }
-.bg-1 { background: orange; }
-.bg-2 { background: pink; }
-.bg-3 { background: purple; }
+.bg-0 { background: #fff2a8; }
+.bg-1 { background: #ffb7b7; }
+.bg-2 { background: #a8d1ff; }
+.bg-3 { background: #81C6DD; }
+.bg-4 { background: #E9B64D; }
+.bg-5 { background: #E48743; }
+.bg-6 { background: #A32626; }
+.bg-7 { background: #496480; }
