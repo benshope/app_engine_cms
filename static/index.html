@@ -27,13 +27,15 @@
   <i ng-click="show_html = !show_html" class="fa fa-columns {{show_html ? 'active' : 'inactive'}}"></i>
 </div>
 
+<div class="text flex col" ng-show="show_html">
+  <textarea  ng-repeat="(x, html_string) in html_strings" class="border padded bg-{{tint ? x : ''}}" ng-model="html_strings[x]"></textarea>
+</div>
+
 <div class="flex">
   <div class="visual">
     <div ng-repeat="(x, html_string) in html_strings" class="bg-{{tint ? x : ''}}" contenteditable ng-model="html_strings[x]">asdfasdf</div>
   </div>
-  <div class="text flex col" ng-show="show_html">
-    <textarea  ng-repeat="(x, html_string) in html_strings" class="border padded bg-{{tint ? x : ''}}" ng-model="html_strings[x]"></textarea>
-  </div>
+  <div ng-show="show_html">&nbsp;</div>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
