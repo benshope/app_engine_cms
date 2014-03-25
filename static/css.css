@@ -35,8 +35,6 @@ textarea:focus, div:focus { outline: none; }
 }
 
 .flex { 
-  /*width: 100%; */
-  /*height:100%;*/
   display: flex;
   align-content: stretch;
   align-items: stretch; 
@@ -56,7 +54,6 @@ textarea:focus, div:focus { outline: none; }
   background: rgba(0,0,0,0.1); 
   color: 404040; 
 }
-
 
 .bg-0 { background: yellow; }
 .bg-1 { background: orange; }
