@@ -18,7 +18,21 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.show_parent_html = true;
   $scope.tint = false;
 
-  $scope.html_strings = {1:'second', 2:'third'};
+  var partials = {
+    'x': ['header <x>body</x> footer'],
+    'page': {
+      'x': ['<x>title</x> <x>body</x>'],
+      'about': {'x': ['about title', 'about body']},
+      'contact': {'x': ['contact title', 'contact body']}
+    },
+    'post': {
+      'x': ['<x>title</x> <x>body</x>'],
+      'about': {'x': ['about title', 'about body']},
+      'contact': {'x': ['contact title', 'contact body']}
+    }
+  };
+
+  $scope.html_strings = {1:'one', 2:'two', 3:'three'};
 
   $scope.contact = function() {
     $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
@@ -27,9 +41,9 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.get_content = function() { $scope.server = $http.get('/database'); };
   $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 
-  $scope.load_page = function() {
-    $scope.html_strings[0] = '<b>ldskfjsldkfj</b>';
-  };
+  // $scope.load_page = function() {
+  //   $scope.html_strings[0] = '<b>ldskfjsldkfj</b>';
+  // };
 
 });
 
@@ -53,33 +67,7 @@ app.directive('contenteditable', function() {
   });
 
 
-
-
-
-
-  // $scope.login = function() {
-  //   User.login($scope.credentials);
-  // };
-  // $scope.logout = function() {
-  //   User.logout();
-  // };
-
-
-
-
-
-  // $scope.current_html = function() { };
-
-  // Direct all routes to this controller
-  // Get all url parameters as nested template names
-  // If a template level does not exist, look at it's parent, and create it
-  // If a template does exist, place it into it's parent
-
-  // Add a timeout function that:
-  // Looks at all templates, and deletes any children without parent tags
-  // Looks at all templates, and adds an empty string for parent tags
-
-  // $scope.templates = {
+  // $scope.partials = {
   //   root: 'header <page html> home text </page> footer',
   //   page: {
   //     html: ['<line title></line><page html></page>'],
@@ -93,6 +81,28 @@ app.directive('contenteditable', function() {
   //     mysecondpost: ['second post content']
   //   }
   // };
+
+
+
+  // $scope.login = function() {
+  //   User.login($scope.credentials);
+  // };
+  // $scope.logout = function() {
+  //   User.logout();
+  // };
+
+
+
+  // $scope.current_html = function() { };
+
+  // Direct all routes to this controller
+  // Get all url parameters as nested template names
+  // If a template level does not exist, look at it's parent, and create it
+  // If a template does exist, place it into it's parent
+
+  // Add a timeout function that:
+  // Looks at all templates, and deletes any children without parent tags
+  // Looks at all templates, and adds an empty string for parent tags
 
   // $scope.html_string = {html:'', visual:''};
   // $scope.$watch('html_string.html', function(html) {
