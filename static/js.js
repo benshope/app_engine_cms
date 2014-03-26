@@ -1,18 +1,10 @@
 
 var app = angular.module('app', ['ui.bootstrap']);
 
-// This needs to accept multi-level routes
-// $routeProvider.when('/:name', { templateUrl: 'index.html', controller: Ctrl });
+app.controller('Ctrl', function($scope, $http, $window) {
+  // SHIFT ISN'T WORKING
+  $scope.url = $window.location.pathname.split("/").shift();
 
-//, $route, $routeParams, $compile
-app.controller('Ctrl', function($scope, $sce, $http, $window) {
-
-  // $route.current.templateUrl = 'partials/' + $routeParams.name + ".html";
-  // $http.get($route.current.templateUrl).then(function (msg) {
-  //   $('#views').html($compile(msg.data)($scope));
-  // });
-
-  $scope.url = $window.location.pathname;
   $scope.logged_in = true;
   $scope.show_html = true;
   $scope.show_parent_html = true;
@@ -32,7 +24,7 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
     }
   };
 
-  $scope.html_strings = {1:'one', 2:'two', 3:'three'};
+  $scope.html_strings = {};
 
   $scope.contact = function() {
     $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
@@ -41,9 +33,10 @@ app.controller('Ctrl', function($scope, $sce, $http, $window) {
   $scope.get_content = function() { $scope.server = $http.get('/database'); };
   $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 
-  // $scope.load_page = function() {
-  //   $scope.html_strings[0] = '<b>ldskfjsldkfj</b>';
-  // };
+  $scope.load_page = function() {
+    // for level in url:
+      $scope.html_strings[0] = '<b>ldskfjsldkfj</b>';
+  };
 
 });
 

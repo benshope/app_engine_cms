@@ -22,7 +22,7 @@
 </div> -->
 
 <div class="header right" ng-show="logged_in">
-  <i ng-click="load_page()" class="fa fa-cloud-download"></i>
+  <i ng-click="load_page()" class="fa fa-cloud-download">{{url}}</i>
   <i ng-click="tint = !tint" class="fa fa-tint {{tint ? 'active' : 'inactive' }}"></i>
   <i ng-show="show_html" ng-click="show_parent_html = !show_parent_html" class="fa fa-bars {{show_parent_html ? 'active' : 'inactive' }}"></i>
   <i ng-click="show_html = !show_html" class="fa fa-columns {{show_html ? 'active' : 'inactive'}}"></i>
