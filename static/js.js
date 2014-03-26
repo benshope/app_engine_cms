@@ -3,7 +3,7 @@ var app = angular.module('app', ['ui.bootstrap']);
 
 app.controller('Ctrl', function($scope, $http, $window) {
   // SHIFT ISN'T WORKING
-  $scope.url = $window.location.pathname.split("/").shift();
+  $scope.url = $window.location.pathname.split("/").splice(0,1);
 
   $scope.logged_in = true;
   $scope.show_html = true;
