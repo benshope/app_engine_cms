@@ -11,17 +11,17 @@ app.controller('Ctrl', function($scope, $http, $window) {
   $scope.tint = false;
 
   var partials = {
-    '': ['header <x>body</x> footer'],
+    '': 'header <x>body</x> footer',
     'page': {
-      'x': ['<x>title</x> <x>body</x>'],
-      'about': {'x': ['about title', 'about body']},
-      'contact': {'x': ['contact title', 'contact body']}
-    },
-    'post': {
-      'x': ['<x>title</x> <x>body</x>'],
-      'about': {'x': ['about title', 'about body']},
-      'contact': {'x': ['contact title', 'contact body']}
+      '': '<x>body</x>',
+      'about': {'': 'about title'},
+      'contact': {'': 'contact title'}
     }
+    // 'post': {
+    //   '': ['<x>title</x> <x>body</x>'],
+    //   'about': {'': ['about title', 'about body']},
+    //   'contact': {'': ['contact title', 'contact body']}
+    // }
   };
 
   $scope.html_strings = {};
@@ -34,11 +34,14 @@ app.controller('Ctrl', function($scope, $http, $window) {
   $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 
   $scope.load_page = function() {
-    for (var x = 0; x < $scope.url.length; x++) {
-        var path = _.first($scope.url, 0);
-        console.log(path);
+    $scope.html_strings = {};
+    var url = $scope.url;
+    var data = partials;
+
+    for (var x = 0; x < url.length; x++) {
+      $scope.html_strings[x] = data[''];
+      data = data[url[x+1]];
     }
-    // $scope.html_strings[partial] = partials[partial]; 
   };
 
 });
