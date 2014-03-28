@@ -3,7 +3,7 @@ var app = angular.module('app', ['ui.bootstrap']);
 
 app.controller('Ctrl', function($scope, $http, $window) {
   // SHIFT ISN'T WORKING
-  $scope.url = $window.location.pathname.split("/").splice(0,1);
+  $scope.url = $window.location.pathname.split("/");
 
   $scope.logged_in = true;
   $scope.show_html = true;
@@ -11,7 +11,7 @@ app.controller('Ctrl', function($scope, $http, $window) {
   $scope.tint = false;
 
   var partials = {
-    'x': ['header <x>body</x> footer'],
+    '': ['header <x>body</x> footer'],
     'page': {
       'x': ['<x>title</x> <x>body</x>'],
       'about': {'x': ['about title', 'about body']},
@@ -34,8 +34,11 @@ app.controller('Ctrl', function($scope, $http, $window) {
   $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 
   $scope.load_page = function() {
-    // for level in url:
-      $scope.html_strings[0] = '<b>ldskfjsldkfj</b>';
+    for (var x = 0; x < $scope.url.length; x++) {
+        var path = _.first($scope.url, 0);
+        console.log(path);
+    }
+    // $scope.html_strings[partial] = partials[partial]; 
   };
 
 });
