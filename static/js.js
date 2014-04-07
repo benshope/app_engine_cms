@@ -1,10 +1,17 @@
 
-var app = angular.module('app', ['ui.bootstrap']);
+var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
+
+app.config(function($urlRouterProvider, $stateProvider) {
+  $urlRouterProvider.otherwise('/');
+  $state('home', {
+    url:'/',
+    templateUrl: 'index.html',
+    controller: 'Ctrl' 
+  })
+});
 
 app.controller('Ctrl', function($scope, $http, $window) {
-  // SHIFT ISN'T WORKING
   $scope.url = $window.location.pathname.split("/");
-
   $scope.logged_in = true;
   $scope.show_html = true;
   $scope.show_parent_html = true;
@@ -110,11 +117,6 @@ app.directive('contenteditable', function() {
   // $scope.$watch('html_string.visual', function(visual) {
   //       $scope.html_string.escaped = $sce.trustAsHtml(visual);
   // }, true);
-
-
-
-
-
 
 
 

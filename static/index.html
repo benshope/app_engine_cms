@@ -1,7 +1,7 @@
 <html lang="en" ng-app="app">
 <head>
   <meta charset="utf-8">
-  <title>App Engine CMS</title>
+  <title ng-bind="'Site Title -' + $state.current.name">Site Title</title>
   <link rel="shortcut icon" href="static/img/favicon.png">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -13,14 +13,34 @@
 
 <body ng-controller="Ctrl">
 
-<!-- <div class="header left" ng-show="logged_in">
-<i id="New_URL" class="fa fa-files-o"></i>
-  <i id="Upload_JSON" class="fa fa-cloud-upload"></i>
-  <i id="Sign_Out" class="fa fa-sign-out"></i>
-  <i ng-click="show_html = !show_html" class="fa fa-bold"></i>
-</div> -->
+<div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="header">
+      <a class="brand site-title pull-left" id="headernavlink"><i class="logo fa fa-tint"></i>My Site</a>
+      <ul id="topnav" class="user text-right nav nav-pills pull-right">
+        <li><a ui-sref="route1">Route 1</a> &nbsp;|&nbsp;</li>
+        <li><a ui-sref="route2">Route 2</a> &nbsp;|&nbsp;</li>
+        <li><a ui-sref="route3">Route 3</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<div class="header right" ng-show="logged_in">
+<div ui-view class="container slide" style="padding-top: 80px;"></div>
+
+<hr>
+<pre>
+  $state = {{$state.current.name}}
+  $stateParams = {{$stateParams}}
+  $state full url = {{ $state.$current.url.source }}
+</pre>
+
+
+
+
+
+
+<!-- <div class="header right" ng-show="logged_in">
   <i ng-click="load_page()" class="fa fa-cloud-download active">{{url}}</i>
   <i ng-click="tint = !tint" class="fa fa-tint {{tint ? 'active' : 'inactive' }}"></i>
   <i ng-show="show_html" ng-click="show_parent_html = !show_parent_html" class="fa fa-bars {{show_parent_html ? 'active' : 'inactive' }}"></i>
@@ -36,11 +56,18 @@
     <div ng-repeat="(x, html_string) in html_strings" class="bg-{{tint ? x : ''}}" contenteditable ng-model="html_strings[x]">asdfasdf</div>
   </div>
   <div ng-show="show_html">&nbsp;</div>
-</div>
+</div> -->
+
+
+
+
+
+
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 <script src="static/js.js"></script>
 
 </body>
