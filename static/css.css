@@ -416,34 +416,26 @@ ul.social li:nth-child(6):before {
   background: transparent;
   color: #db522f;
 }
-/* Footer
-/ -------------------------------------------------- */
+
+/* FOOTER */
 .footer {
-  background: #db522f;
-  background: white;
-  padding: 0px 0 8px 0 !important;
+  background: #C0C0C0;
+  padding-bottom: 8px;
 }
-.footer .footer-title {
+.footer-title {
   font-size: 20px;
   text-transform: uppercase;
-  font-weight:300;
-  color: white !important;
+  font-weight: 400;
 }
-.footer .footer-title a:hover,
-.footer .footer-title a:focus {
-  text-decoration: none;
+.footer i {
+  padding: 4px 9px;
+  border-radius: 5px;
+  background: #f2f2f2;
 }
-.footer .copyright {
+.copyright {
   margin-top: 22px;
 }
-.footer img {
-margin-top:-5px;
-margin-right: 7px;
-height:24px; 
-padding:4px;
-border-radius:3px;
-background: #76cc1e; 
-}
+
 /* Responsive fix
 / -------------------------------------------------- */
 /* Portrait tablet to landscape and desktop */

@@ -2,58 +2,28 @@
 var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise("/route1");
+  $urlRouterProvider.otherwise("/");
   $stateProvider
-    .state('route1', {
-        url: "/route1",
-        templateUrl: "static/route1.html"
+    .state('home', {
+      url: "/",
+      templateUrl: "static/html/home.html",
     })
-    .state('route1.list', {
-      url: "/list",
-      templateUrl: "static/route1.list.html",
-      controller: function($scope){
-        $scope.items = ["A", "List", "Of", "Items"];
-      }
+    .state('page', {
+        url: "/page",
+        templateUrl: "static/html/page.html"
     })
-    .state('route2', {
-        url: "/route2",
-        templateUrl: "static/route2.html"
-    })
-    .state('route2.list', {
-      url: "/list",
-      templateUrl: "static/route2.list.html",
-      controller: function($scope){
-        $scope.things = ["A", "Set", "Of", "Things"];
-      }
-    })
-    .state('route3', {
-        url: "/route2",
-        templateUrl: "static/route3.html"
-    })
-    .state('route3.list', {
-      url: "/list",
-      templateUrl: "static/route3.list.html",
-      controller: function($scope){
-        $scope.things = ["A", "Set", "Of", "Things"];
-      }
+    .state('post', {
+      url: "/post",
+      templateUrl: "static/html/post.html",
     });
   });
 
-
 app.controller('Ctrl', function($scope, $http, $window) {
   $scope.url = $window.location.pathname.split("/");
-
   // $scope.logged_in = true;
   // $scope.show_html = true;
   // $scope.show_parent_html = true;
   // $scope.tint = false;
-
-  // 'post': {
-  //   '': ['<x>title</x> <x>body</x>'],
-  //   'about': {'': ['about title', 'about body']},
-  //   'contact': {'': ['contact title', 'contact body']}
-  // }
-
   // $scope.html_strings = {};
 
   // $scope.contact = function() {
@@ -73,8 +43,8 @@ app.controller('Ctrl', function($scope, $http, $window) {
   //     data = data[url[x+1]];
   //   }
   // };
-
 });
+
 
 
 // app.directive('contenteditable', function() {
@@ -96,50 +66,50 @@ app.controller('Ctrl', function($scope, $http, $window) {
 //   });
 
 
-  // $scope.partials = {
-  //   root: 'header <page html> home text </page> footer',
-  //   page: {
-  //     html: ['<line title></line><page html></page>'],
-  //     contact: { title: 'contact title',
-  //                html: 'contact body']
-  //   },
-  //   blog: ['blog template'],
-  //   post: {
-  //     html: ['post template'],
-  //     myfirstpost: ['first post content'],
-  //     mysecondpost: ['second post content']
-  //   }
-  // };
+
+// $scope.partials = {
+//   root: 'header <page html> home text </page> footer',
+//   page: {
+//     html: ['<line title></line><page html></page>'],
+//     contact: { title: 'contact title',
+//                html: 'contact body']
+//   },
+//   blog: ['blog template'],
+//   post: {
+//     html: ['post template'],
+//     myfirstpost: ['first post content'],
+//     mysecondpost: ['second post content']
+//   }
+// };
 
 
 
-  // $scope.login = function() {
-  //   User.login($scope.credentials);
-  // };
-  // $scope.logout = function() {
-  //   User.logout();
-  // };
+// $scope.login = function() {
+//   User.login($scope.credentials);
+// };
+// $scope.logout = function() {
+//   User.logout();
+// };
 
 
 
-  // $scope.current_html = function() { };
+// $scope.current_html = function() { };
+// Direct all routes to this controller
+// Get all url parameters as nested template names
+// If a template level does not exist, look at it's parent, and create it
+// If a template does exist, place it into it's parent
 
-  // Direct all routes to this controller
-  // Get all url parameters as nested template names
-  // If a template level does not exist, look at it's parent, and create it
-  // If a template does exist, place it into it's parent
+// Add a timeout function that:
+// Looks at all templates, and deletes any children without parent tags
+// Looks at all templates, and adds an empty string for parent tags
 
-  // Add a timeout function that:
-  // Looks at all templates, and deletes any children without parent tags
-  // Looks at all templates, and adds an empty string for parent tags
-
-  // $scope.html_string = {html:'', visual:''};
-  // $scope.$watch('html_string.html', function(html) {
-  //       $scope.html_string.visual = $sce.trustAsHtml(newVal);
-  // }, true);
-  // $scope.$watch('html_string.visual', function(visual) {
-  //       $scope.html_string.escaped = $sce.trustAsHtml(visual);
-  // }, true);
+// $scope.html_string = {html:'', visual:''};
+// $scope.$watch('html_string.html', function(html) {
+//       $scope.html_string.visual = $sce.trustAsHtml(newVal);
+// }, true);
+// $scope.$watch('html_string.visual', function(visual) {
+//       $scope.html_string.escaped = $sce.trustAsHtml(visual);
+// }, true);
 
 
 
@@ -165,6 +135,5 @@ app.controller('Ctrl', function($scope, $http, $window) {
 //     }
 //   };
 // });
-
 
 
