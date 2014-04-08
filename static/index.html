@@ -1,7 +1,7 @@
 <html lang="en" ng-app="app">
 <head>
   <meta charset="utf-8">
-  <title ng-bind="'Site Title -' + $state.current.name">Site Title</title>
+  <title ng-bind="'Site Title ' + $state.current.name">Site Title</title>
   <link rel="shortcut icon" href="static/img/favicon.png">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link href="static/css.css" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <script src="static/js.js"></script>
 </head>
 
 <body ng-controller="Ctrl">
@@ -16,28 +22,17 @@
 <div class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="header">
-      <a class="brand title pull-left" id="headernavlink"><i class="logo fa fa-tint"></i>My Site</a>
+      <a href="#" class="brand title pull-left" id="headernavlink"><i class="logo fa fa-bolt"></i>Site Title</a>
       <ul id="topnav" class="menu text-right nav nav-pills pull-right">
-        <li><a ui-sref="route1">Route 1</a> &nbsp;|&nbsp;</li>
-        <li><a ui-sref="route2">Route 2</a> &nbsp;|&nbsp;</li>
-        <li><a ui-sref="route3">Route 3</a></li>
+        <li><a href="#" ui-sref="route1">Route 1</a>|</li>
+        <li><a href="#" ui-sref="route2">Route 2</a>|</li>
+        <li><a href="#" ui-sref="route3">Route 3</a></li>
       </ul>
     </div>
   </div>
 </div>
 
 <div ui-view class="container slide" style="padding-top: 80px;"></div>
-
-<hr>
-<pre>
-  $state = {{$state.current.name}}
-  $stateParams = {{$stateParams}}
-  $state full url = {{ $state.$current.url.source }}
-</pre>
-
-
-
-
 
 
 <!-- <div class="header right" ng-show="logged_in">
@@ -57,18 +52,6 @@
   </div>
   <div ng-show="show_html">&nbsp;</div>
 </div> -->
-
-
-
-
-
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-<script src="static/js.js"></script>
 
 </body>
 </html>

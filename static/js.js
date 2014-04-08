@@ -1,76 +1,99 @@
 
 var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
-app.config(function($urlRouterProvider, $stateProvider) {
-  $urlRouterProvider.otherwise('/');
-  $state('home', {
-    url:'/',
-    templateUrl: 'index.html',
-    controller: 'Ctrl' 
-  })
-});
+app.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise("/route1");
+  $stateProvider
+    .state('route1', {
+        url: "/route1",
+        templateUrl: "static/route1.html"
+    })
+    .state('route1.list', {
+      url: "/list",
+      templateUrl: "static/route1.list.html",
+      controller: function($scope){
+        $scope.items = ["A", "List", "Of", "Items"];
+      }
+    })
+    .state('route2', {
+        url: "/route2",
+        templateUrl: "static/route2.html"
+    })
+    .state('route2.list', {
+      url: "/list",
+      templateUrl: "static/route2.list.html",
+      controller: function($scope){
+        $scope.things = ["A", "Set", "Of", "Things"];
+      }
+    })
+    .state('route3', {
+        url: "/route2",
+        templateUrl: "static/route3.html"
+    })
+    .state('route3.list', {
+      url: "/list",
+      templateUrl: "static/route3.list.html",
+      controller: function($scope){
+        $scope.things = ["A", "Set", "Of", "Things"];
+      }
+    });
+  });
+
 
 app.controller('Ctrl', function($scope, $http, $window) {
   $scope.url = $window.location.pathname.split("/");
-  $scope.logged_in = true;
-  $scope.show_html = true;
-  $scope.show_parent_html = true;
-  $scope.tint = false;
 
-  var partials = {
-    '': 'header <x>body</x> footer',
-    'page': {
-      '': '<x>body</x>',
-      'about': {'': 'about title'},
-      'contact': {'': 'contact title'}
-    }
-    // 'post': {
-    //   '': ['<x>title</x> <x>body</x>'],
-    //   'about': {'': ['about title', 'about body']},
-    //   'contact': {'': ['contact title', 'contact body']}
-    // }
-  };
+  // $scope.logged_in = true;
+  // $scope.show_html = true;
+  // $scope.show_parent_html = true;
+  // $scope.tint = false;
 
-  $scope.html_strings = {};
+  // 'post': {
+  //   '': ['<x>title</x> <x>body</x>'],
+  //   'about': {'': ['about title', 'about body']},
+  //   'contact': {'': ['contact title', 'contact body']}
+  // }
 
-  $scope.contact = function() {
-    $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
-  };
+  // $scope.html_strings = {};
 
-  $scope.get_content = function() { $scope.server = $http.get('/database'); };
-  $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
+  // $scope.contact = function() {
+  //   $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
+  // };
 
-  $scope.load_page = function() {
-    $scope.html_strings = {};
-    var url = $scope.url;
-    var data = partials;
+  // $scope.get_content = function() { $scope.server = $http.get('/database'); };
+  // $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 
-    for (var x = 0; x < url.length; x++) {
-      $scope.html_strings[x] = data[''];
-      data = data[url[x+1]];
-    }
-  };
+  // $scope.load_page = function() {
+  //   $scope.html_strings = {};
+  //   var url = $scope.url;
+  //   var data = partials;
+
+  //   for (var x = 0; x < url.length; x++) {
+  //     $scope.html_strings[x] = data[''];
+  //     data = data[url[x+1]];
+  //   }
+  // };
 
 });
 
 
-app.directive('contenteditable', function() {
-    return {
-      restrict: 'A',
-      require: '?ngModel',
-      link: function(scope, element, attrs, ngModel) {
-        if(!ngModel) return;
-        ngModel.$render = function() { element.html(ngModel.$viewValue || ''); };
-        element.on('blur keyup change', function() { scope.$apply(read); });
-        read();
-        function read() {
-          var html = element.html();
-          if( attrs.stripBr && html == '<br>' ) { html = ''; }
-          ngModel.$setViewValue(html);
-        }
-      }
-    };
-  });
+// app.directive('contenteditable', function() {
+//     return {
+//       restrict: 'A',
+//       require: '?ngModel',
+//       link: function(scope, element, attrs, ngModel) {
+//         if(!ngModel) return;
+//         ngModel.$render = function() { element.html(ngModel.$viewValue || ''); };
+//         element.on('blur keyup change', function() { scope.$apply(read); });
+//         read();
+//         function read() {
+//           var html = element.html();
+//           if( attrs.stripBr && html == '<br>' ) { html = ''; }
+//           ngModel.$setViewValue(html);
+//         }
+//       }
+//     };
+//   });
 
 
   // $scope.partials = {
@@ -120,10 +143,6 @@ app.directive('contenteditable', function() {
 
 
 
-
-
-
-
 // app.factory('User', function($http, $location) {
 //   return {
 //     login: function(credentials) {
@@ -146,3 +165,6 @@ app.directive('contenteditable', function() {
 //     }
 //   };
 // });
+
+
+

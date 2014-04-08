@@ -18,22 +18,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Lato";
 }
 
-
 /* NAVBAR */
 .navbar {
-  transition: all .2s linear;
-  padding: 20px 0px 21px 0px;
   position: fixed !important;
   border-bottom: none;
+  padding: 20px 0px;
   background: rgba(255, 255, 255, 1);
+  transition: all .2s linear;
 }
 .logo {
   border: 2px solid #C0C0C0;
-  transition: all .2s linear;
   margin: -14px 15px -5px 0;
-  padding: 5px 10px;
+  padding: 5px 12px;
   border-radius:5px;
   background: #C0C0C0; 
+  transition: all .2s linear;
 }
 .title:hover .logo, .title:focus .logo { 
   background: white;
@@ -47,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 .menu li a {
+  margin: 0 3px 0 1px;
   transition: all .2s linear;
   font-size: 14px;
   border: 2px solid #C0C0C0;
@@ -535,11 +535,6 @@ margin-right: auto;
 }
 
 .bold {font-weight: 400;}
-
-
-
-
-
 
 
 
