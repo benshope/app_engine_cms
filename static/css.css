@@ -419,22 +419,28 @@ ul.social li:nth-child(6):before {
 
 /* FOOTER */
 .footer {
+  color: white;
   background: #C0C0C0;
-  padding-bottom: 8px;
+  padding: 20px 0 10px 0;
+}
+.footer i {
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: white;
 }
 .footer-title {
-  font-size: 20px;
+  /*color: white;*/
   text-transform: uppercase;
   font-weight: 400;
 }
-.footer i {
-  padding: 4px 9px;
-  border-radius: 5px;
-  background: #f2f2f2;
+
+.footer .pull-left:hover {
+  color:white;
 }
-.copyright {
-  margin-top: 22px;
+.footer .pull-left:hover i {
+  background: #db522f;
 }
+
 
 /* Responsive fix
 / -------------------------------------------------- */
