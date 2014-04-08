@@ -16,6 +16,10 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('post', {
       url: "/post",
       templateUrl: "static/html/post.html",
+    })
+    .state('contact', {
+      url: "/contact",
+      templateUrl: "static/html/contact.html",
     });
   });
 

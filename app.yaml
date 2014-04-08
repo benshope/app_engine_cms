@@ -5,13 +5,13 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /login
+- url: /aelogin
   script: main.app
-- url: /logout
+- url: /aelogout
   script: main.app
-- url: /contact
+- url: /aecontact
   script: main.app
-- url: /database
+- url: /aedatabase
   script: main.app
 - url: /static
   static_dir: static

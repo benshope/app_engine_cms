@@ -38,7 +38,7 @@ class Contact(webapp2.RequestHandler):
         self.response.out.write('Thanks!  Your message has been sent.')
 
 app = webapp2.WSGIApplication([
-  ('/login', Login),
-  ('/contact', Contact),
-  ('/database', Database)
+  ('/aelogin', Login),
+  ('/aecontact', Contact),
+  ('/aedatabase', Database)
 ])
