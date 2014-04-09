@@ -14,42 +14,46 @@ var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise('/');
   $stateProvider
     .state('home', {
-      url: "/",
-      templateUrl: "static/html/home.html",
+      url: '/',
+      templateUrl: 'static/html/home.html',
       controller: 'Ctrl'
     })
     .state('page', {
-      url: "/page",
-      templateUrl: "static/html/page.html",
+      url: '/page',
+      templateUrl: 'static/html/page.html',
       controller: 'Ctrl'
     })
     .state('post', {
-      url: "/post",
-      templateUrl: "static/html/post.html",
+      url: '/post',
+      templateUrl: 'static/html/post.html',
       controller: 'Ctrl'
     })
     .state('contact', {
-      url: "/contact",
-      templateUrl: "static/html/contact.html",
+      url: '/contact',
+      templateUrl: 'static/html/contact.html',
       controller: 'Ctrl'
     });
   });
 
 app.controller('Ctrl', function($scope, $http, $window) {
-  $scope.url = $window.location.pathname.split("/");
+  $scope.url = $window.location.pathname.split('/');
   $scope.admin = true;
-  // $scope.logged_in = true;
+
+  $scope.submit = function() {
+    $http.post('/email', 
+      {name: $scope.contact_name, 
+      email: $scope.contact_email, 
+      message: $scope.contact_message});
+    $scope.contact_sent = true;
+  };
+
   // $scope.show_html = true;
   // $scope.show_parent_html = true;
   // $scope.tint = false;
   // $scope.html_strings = {};
-
-  // $scope.contact = function() {
-  //   $http.post('/contact', {name: 'Test Name', email: 'Test Email', message: 'Test Body'});
-  // };
 
   // $scope.get_content = function() { $scope.server = $http.get('/database'); };
   // $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
@@ -58,7 +62,6 @@ app.controller('Ctrl', function($scope, $http, $window) {
   //   $scope.html_strings = {};
   //   var url = $scope.url;
   //   var data = partials;
-
   //   for (var x = 0; x < url.length; x++) {
   //     $scope.html_strings[x] = data[''];
   //     data = data[url[x+1]];
@@ -66,7 +69,21 @@ app.controller('Ctrl', function($scope, $http, $window) {
   // };
 });
 
+app.directive('mapDirective', function() {
+  return function (scope, elem, attrs) {
+    var latitude = attrs.latitude && parseFloat(attrs.latitude, 10) || 43.074688;
+    var longitude = attrs.longitude && parseFloat(attrs.longitude, 10) || -89.384294;
 
+    var mapOptions = {
+      zoom: 8,
+      center: new google.maps.LatLng(latitude, longitude),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel: false  
+    };
+
+    var map = new google.maps.Map(elem[0], mapOptions);
+  };
+});
 
 app.directive('contenteditable', function() {
     return {
@@ -87,24 +104,6 @@ app.directive('contenteditable', function() {
   });
 
 
-
-// $scope.partials = {
-//   root: 'header <page html> home text </page> footer',
-//   page: {
-//     html: ['<line title></line><page html></page>'],
-//     contact: { title: 'contact title',
-//                html: 'contact body']
-//   },
-//   blog: ['blog template'],
-//   post: {
-//     html: ['post template'],
-//     myfirstpost: ['first post content'],
-//     mysecondpost: ['second post content']
-//   }
-// };
-
-
-
 // $scope.login = function() {
 //   User.login($scope.credentials);
 // };
@@ -112,17 +111,6 @@ app.directive('contenteditable', function() {
 //   User.logout();
 // };
 
-
-
-// $scope.current_html = function() { };
-// Direct all routes to this controller
-// Get all url parameters as nested template names
-// If a template level does not exist, look at it's parent, and create it
-// If a template does exist, place it into it's parent
-
-// Add a timeout function that:
-// Looks at all templates, and deletes any children without parent tags
-// Looks at all templates, and adds an empty string for parent tags
 
 // $scope.html_string = {html:'', visual:''};
 // $scope.$watch('html_string.html', function(html) {
@@ -133,11 +121,10 @@ app.directive('contenteditable', function() {
 // }, true);
 
 
-
 // app.factory('User', function($http, $location) {
 //   return {
 //     login: function(credentials) {
-//       var login = $http.post("/user/login", credentials);
+//       var login = $http.post('/user/login', credentials);
 //       var login = credentials;
 //       login.success(function() {
 //         sessionStorage.setItem('authenticated', true);
@@ -145,7 +132,7 @@ app.directive('contenteditable', function() {
 //       return login;
 //     },
 //     logout: function() {
-//       var logout = $http.get("/user/logout");
+//       var logout = $http.get('/user/logout');
 //       logout.success(function() {
 //         sessionStorage.removeItem('authenticated');
 //       });
@@ -156,5 +143,4 @@ app.directive('contenteditable', function() {
 //     }
 //   };
 // });
-
 

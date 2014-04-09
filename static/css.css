@@ -14,6 +14,7 @@ a:hover, a:focus {
   color: #db522f;
   text-decoration: none;
 }
+textarea { resize: none; }
 *:focus { outline: none; }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato";
@@ -256,10 +257,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CONTACT */
 #map {
-  background-color: #C0C0C0;
+  background: #C0C0C0;
   display: block;
   height: 450px;
   margin: 0 auto;
+  margin-top: 95px;
 }
 .contact {
   background: #f3f3f3;
@@ -270,8 +272,38 @@ h1, h2, h3, h4, h5, h6 {
 .contact h2 {
   font-weight: 400;
 }
+.form-control {
+  border-radius: 0px !important;
+}
+.form-control:focus {
+  box-shadow: 0 0 0;
+}
+.contact-form .input-lg {
+  margin-bottom: 15px;
+  border: 2px solid gray;
+} 
+.contact-form .input-lg:focus {
+  border: 2px solid #db522f;
+} 
+.contact-form .container {
+  padding: 30px 40px 20px 40px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAInT578zwjjgzjm5uaMYAEYB8RmROaABAD2Mw9fuRdIeAAAAABJRU5ErkJggg==) repeat;
+}
+.contact-form .btn-custom {
+  transition: all .2s linear;
+  background: #db522f;
+  /*color: black;*/
+  margin: 20px auto;
+  border: 2px solid #db522f;
+}
+.contact-form .btn-custom:hover,
+.contact-form .btn-custom:focus {
+  color: #000;
+  background:white;
+}
 
-/* social icons */
+
+/* SOCIAL */
 ul.social {
   text-align: center;
   padding: 20px 0 0px;
@@ -282,14 +314,14 @@ ul.social li {
   height: 60px;
   overflow: hidden;
   line-height: 60px;
-  background: #db522f;
+  background: gray;
   margin-bottom: .5em;
   font-size: 20px;
   transition-duration: 0.7s;
 }
 ul.social li:hover,
 ul.social li:focus {
-  background: #33cc99;
+  background: #db522f;
 }
 ul.social li a {
   display: block;
@@ -301,7 +333,7 @@ ul.social li a {
 }
 ul.social li:hover a,
 ul.social li:focus a {
-  top: -39px;
+  top: -40px;
 }
 ul.social li a i {
   color: #fff;
@@ -334,28 +366,7 @@ ul.social li:nth-child(6):before {
   color: #fff;
 }
 
-/* CONTACT FORM */
-.form-control {
-  border-radius: 0px !important;
-}
-.form-control:focus {
-  box-shadow: 0 0 0;
-}
-.contact-form .container {
-  padding: 30px 40px 20px 40px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAInT578zwjjgzjm5uaMYAEYB8RmROaABAD2Mw9fuRdIeAAAAABJRU5ErkJggg==) repeat;
-}
-.contact-form .btn-custom {
-  border-radius: 0px;
-  margin: 20px auto;
-}
-.contact-form .btn-custom:hover,
-.contact-form .btn-custom:focus {
-  color: #000;
-}
-
-/* Subscribe
-/ -------------------------------------------------- */
+/* Subscribe */
 .subscribe {
   background: #1a1a1a;
   color: #fff;
@@ -496,17 +507,6 @@ ul.social li:nth-child(6):before {
 }
 
 
-.about { font-size: 20px;}
-.design {padding-top: 50px; padding-bottom:30px;}
-.design .row {padding-top: 30px; padding-bottom:30px; font-size: 22px; /*border-bottom:1px dashed gray;*/}
-/*.row > img {margin-top:-200px;}*/
-
-#contact button { 
-display: block;
-width: 100px;
-margin-left: auto;
-margin-right: auto;
-}
 
 .bold {font-weight: 400;}
 

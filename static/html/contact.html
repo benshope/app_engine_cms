@@ -1,6 +1,5 @@
 <section id="contact" class="contact">
-
-  <div id="map"></div>
+  <div id="map" class="google-map" map-directive="" latitude="43.074688" longitude="-89.384294"></div>
 
   <div class="container">
     <div class="row">
@@ -10,7 +9,7 @@
       </div>
       <div class="col-sm-6">
         <br>
-        <p class="text-center" contenteditable="{{admin}}">Check us out at these social links:</p>
+        <p class="text-center" contenteditable="{{admin}}">Social Links</p>
         
         <ul class="unstyled inline social">
           <li><a href="#"><i class="fa fa-phone"></i></a></li>
@@ -21,12 +20,6 @@
           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
         </ul>
         
-<!--         <ul class="list-inline text-center">
-          <li><a href="#">Our Ticket System</a></li>
-          <li><a href="#">Our Forum</a></li>
-          <li><a href="#">Following Contact Form</a></li>
-        </ul> -->
-        
       </div>
     </div>
   </div>
@@ -34,17 +27,11 @@
   <div class="contact-form text-center">
     <div class="container contact-form-inner">
       <div class="row">
-        <form id="contact-form" class="contact-form" role="form">
-          <div class="form-group">
-            <input type="text" class="form-control input-lg" name="name" placeholder="Name">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control input-lg" name="email" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control input-lg" name="message" placeholder="Message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fa fa-envelope"></i> &nbsp;Send</button>
+        <form id="contact-form" class="contact-form" role="form" ng-submit="submit()">
+            <input type="text" ng-model="contact_name" class="form-control input-lg" name="name" placeholder="Name" required>
+            <input type="email" ng-model="contact_email" class="form-control input-lg" name="email" placeholder="Email" required>
+            <textarea ng-model="contact_message" class="form-control input-lg" name="message" placeholder="Message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-custom btn-success btn-block btn-lg">Send</button>
         </form>
       </div>
     </div>
