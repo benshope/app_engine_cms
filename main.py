@@ -27,7 +27,7 @@ class Login(webapp2.RequestHandler):
         else:
             self.redirect(users.create_login_url(self.request.uri))
 
-class Contact(webapp2.RequestHandler):
+class Email(webapp2.RequestHandler):
     def post(self):
         json_data = json.loads(self.request.body)
         data = [json_data.get(x) for x in ['name', 'email', 'message']]
@@ -38,7 +38,7 @@ class Contact(webapp2.RequestHandler):
         self.response.out.write('Thanks!  Your message has been sent.')
 
 app = webapp2.WSGIApplication([
-  ('/aelogin', Login),
-  ('/aecontact', Contact),
-  ('/aedatabase', Database)
+  ('/login', Login),
+  ('/email', Email),
+  ('/database', Database)
 ])
