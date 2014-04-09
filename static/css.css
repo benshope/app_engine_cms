@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 1);
   transition: all .2s linear;
 }
+
 .logo {
   border: 2px solid #C0C0C0;
   margin: -14px 15px -5px 0;

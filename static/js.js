@@ -1,16 +1,14 @@
 
-function initialize() {
-    var mapOptions = {
-        zoom: 8,
-        center: new google.maps.LatLng(-34.397, 150.644),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false  
-    };
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
+// function initialize() {
+//     var mapOptions = {
+//         zoom: 8,
+//         center: new google.maps.LatLng(-34.397, 150.644),
+//         mapTypeId: google.maps.MapTypeId.ROADMAP,
+//         scrollwheel: false  
+//     };
+//     map = new google.maps.Map(document.getElementById('map'), mapOptions);
+// }
+// google.maps.event.addDomListener(window, 'load', initialize);
 
 var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
@@ -21,23 +19,28 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('home', {
       url: "/",
       templateUrl: "static/html/home.html",
+      controller: 'Ctrl'
     })
     .state('page', {
-        url: "/page",
-        templateUrl: "static/html/page.html"
+      url: "/page",
+      templateUrl: "static/html/page.html",
+      controller: 'Ctrl'
     })
     .state('post', {
       url: "/post",
       templateUrl: "static/html/post.html",
+      controller: 'Ctrl'
     })
     .state('contact', {
       url: "/contact",
       templateUrl: "static/html/contact.html",
+      controller: 'Ctrl'
     });
   });
 
 app.controller('Ctrl', function($scope, $http, $window) {
   $scope.url = $window.location.pathname.split("/");
+  $scope.admin = true;
   // $scope.logged_in = true;
   // $scope.show_html = true;
   // $scope.show_parent_html = true;
@@ -65,23 +68,23 @@ app.controller('Ctrl', function($scope, $http, $window) {
 
 
 
-// app.directive('contenteditable', function() {
-//     return {
-//       restrict: 'A',
-//       require: '?ngModel',
-//       link: function(scope, element, attrs, ngModel) {
-//         if(!ngModel) return;
-//         ngModel.$render = function() { element.html(ngModel.$viewValue || ''); };
-//         element.on('blur keyup change', function() { scope.$apply(read); });
-//         read();
-//         function read() {
-//           var html = element.html();
-//           if( attrs.stripBr && html == '<br>' ) { html = ''; }
-//           ngModel.$setViewValue(html);
-//         }
-//       }
-//     };
-//   });
+app.directive('contenteditable', function() {
+    return {
+      restrict: 'A',
+      require: '?ngModel',
+      link: function(scope, element, attrs, ngModel) {
+        if(!ngModel) return;
+        ngModel.$render = function() { element.html(ngModel.$viewValue || ''); };
+        element.on('blur keyup change', function() { scope.$apply(read); });
+        read();
+        function read() {
+          var html = element.html();
+          if( attrs.stripBr && html == '<br>' ) { html = ''; }
+          ngModel.$setViewValue(html);
+        }
+      }
+    };
+  });
 
 
 
