@@ -280,10 +280,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .contact-form .input-lg {
   margin-bottom: 15px;
-  border: 2px solid gray;
+  border: 1px solid gray;
 } 
 .contact-form .input-lg:focus {
-  border: 2px solid #db522f;
+  border: 1px solid #db522f;
 } 
 .contact-form .container {
   padding: 30px 40px 20px 40px;
