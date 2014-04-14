@@ -1,6 +1,6 @@
 <html lang="en" ng-app="app">
 <head>
-  <title ng-bind="'App Engine CMS CMS ' + $state.current.name">App Engine CMS CMS</title>
+  <title ng-bind="'App Engine CMS ' + $state.current.name">App Engine CMS</title>
   <link rel="shortcut icon" href="static/img/favicon.png">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -21,41 +21,41 @@
 
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a ui-sref="home" class="navbar-brand title pull-left" id="headernavlink"><i class="logo fa fa-bolt"></i><span contenteditable="{{admin}}">App Engine CMS</span></a>
-    </div>
-    <div class="navbar-collapse collapse" ng-class="!navCollapsed && 'in'">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="page">Page</a></li>
-        <li><a ui-sref="contact">Contact</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Nav header</li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a ui-sref="home" class="navbar-brand title pull-left" id="headernavlink"><i class="logo fa fa-bolt"></i><span contenteditable="{{admin}}">App Engine CMS</span></a>
+      </div>
+      <div class="navbar-collapse collapse" ng-class="!navCollapsed && 'in'">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="page">Page</a></li>
+          <li><a ui-sref="contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
 
+      </div>
     </div>
   </div>
-</div>
 
-<div ui-view></div>
+  <div ui-view></div>
 
 <!-- <div class="header right" ng-show="admin">
   <i ng-click="load_page()" class="fa fa-cloud-download active">{{url}}</i>

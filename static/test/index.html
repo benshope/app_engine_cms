@@ -1,0 +1,25 @@
+<html lang="en" ng-app="app">
+<head>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <script>
+    var app = angular.module('app', ['ui.bootstrap']);
+
+    app.controller('AppCtrl', function($scope, $http) {
+      $scope.sayHi = function () { alert("hi"); };
+    });
+
+  </script>
+</head>
+
+<body ng-controller="AppCtrl">
+
+  <div>
+    <div class="button" ng-click="AppCtrl.sayHi()">Click me!</div>
+  </div>
+
+</body>
+</html>

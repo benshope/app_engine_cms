@@ -11,11 +11,13 @@ class Storage(ndb.Model):
 
 class Database(webapp2.RequestHandler):
     def get(self):
-        entity = Storage.get_by_id('content')
+        route = json.loads(self.request.body).get('route')
+        entity = Storage.get_by_id(route)
         self.response.out.write(entity.content)
     def post(self):
-        content = json.loads(self.request.body).get('content')
-        entity = Storage.get_or_insert('content')
+        json_data = json.loads(self.request.body)
+        route, content = [json_data.get(x) for x in ['route', 'content']]
+        entity = Storage.get_or_insert(route)
         entity.content = content
         entity.put()
 

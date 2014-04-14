@@ -38,9 +38,19 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     });
   });
 
-app.controller('Ctrl', function($scope, $http, $window) {
+app.controller('Ctrl', function($scope, $http, $window, $stateProvider) {
+  $scope.admin = function() {
+    //Check if the user is logged in
+    return true;
+  };
+
   $scope.url = $window.location.pathname.split('/');
-  $scope.admin = true;
+
+  $scope.data = function() {
+    //Check if the sitemap is loaded
+    //If the sitemap is not loaded, get it
+    //Check if the 
+  };
 
   $scope.submit = function() {
     $http.post('/email', 
