@@ -1,15 +1,3 @@
-
-// function initialize() {
-//     var mapOptions = {
-//         zoom: 8,
-//         center: new google.maps.LatLng(-34.397, 150.644),
-//         mapTypeId: google.maps.MapTypeId.ROADMAP,
-//         scrollwheel: false  
-//     };
-//     map = new google.maps.Map(document.getElementById('map'), mapOptions);
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);
-
 var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
@@ -35,22 +23,20 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
       url: '/contact',
       templateUrl: 'static/html/contact.html',
       controller: 'Ctrl'
+    })
+    .state('data', {
+      url: '/data',
+      templateUrl: 'static/html/data.html',
+      controller: 'DataCtrl'
     });
   });
 
-app.controller('Ctrl', function($scope, $http, $window, $stateProvider) {
-  $scope.admin = function() {
-    //Check if the user is logged in
-    return true;
-  };
+
+app.controller('Ctrl', function($scope, $http, $window) {
+  
+  $scope.admin = true;
 
   $scope.url = $window.location.pathname.split('/');
-
-  $scope.data = function() {
-    //Check if the sitemap is loaded
-    //If the sitemap is not loaded, get it
-    //Check if the 
-  };
 
   $scope.submit = function() {
     $http.post('/email', 
@@ -60,13 +46,14 @@ app.controller('Ctrl', function($scope, $http, $window, $stateProvider) {
     $scope.contact_sent = true;
   };
 
-  // $scope.show_html = true;
-  // $scope.show_parent_html = true;
-  // $scope.tint = false;
-  // $scope.html_strings = {};
+});
 
-  // $scope.get_content = function() { $scope.server = $http.get('/database'); };
-  // $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
+app.controller('DataCtrl', function($scope, $http, $window) {
+  $scope.admin = true;
+  $scope.show_html = true;
+  $scope.show_parent_html = true;
+  $scope.tint = false;
+  $scope.html_strings = {};
 
   // $scope.load_page = function() {
   //   $scope.html_strings = {};
@@ -77,7 +64,17 @@ app.controller('Ctrl', function($scope, $http, $window, $stateProvider) {
   //     data = data[url[x+1]];
   //   }
   // };
+
+  $scope.data = function() {
+    //Check if the sitemap is loaded
+    //If the sitemap is not loaded, get it
+    //Check if the 
+  };
+
+  // $scope.get_content = function() { $scope.server = $http.get('/database'); };
+  // $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 });
+
 
 app.directive('mapDirective', function() {
   return function (scope, elem, attrs) {
