@@ -27,16 +27,31 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     .state('data', {
       url: '/data',
       templateUrl: 'static/html/data.html',
-      controller: 'DataCtrl'
+      controller: 'Ctrl'
     });
   });
 
 
 app.controller('Ctrl', function($scope, $http, $window) {
-  
   $scope.admin = true;
-
   $scope.url = $window.location.pathname.split('/');
+  $scope.show_html = true;
+  $scope.show_parent_html = true;
+  $scope.tint = false;
+  $scope.html_strings = {0:'sdlkfj',1:'ljlkjl'};
+
+  $scope.load_page = function() {
+    $scope.html_strings = {};
+    var url = $scope.url;
+    var data = partials;
+    for (var x = 0; x < url.length; x++) {
+      $scope.html_strings[x] = data[''];
+      data = data[url[x+1]];
+    }
+  };
+
+  // $scope.get_content = function() { $scope.server = $http.get('/database'); };
+  // $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 
   $scope.submit = function() {
     $http.post('/email', 
@@ -45,34 +60,6 @@ app.controller('Ctrl', function($scope, $http, $window) {
       message: $scope.contact_message});
     $scope.contact_sent = true;
   };
-
-});
-
-app.controller('DataCtrl', function($scope, $http, $window) {
-  $scope.admin = true;
-  $scope.show_html = true;
-  $scope.show_parent_html = true;
-  $scope.tint = false;
-  $scope.html_strings = {};
-
-  // $scope.load_page = function() {
-  //   $scope.html_strings = {};
-  //   var url = $scope.url;
-  //   var data = partials;
-  //   for (var x = 0; x < url.length; x++) {
-  //     $scope.html_strings[x] = data[''];
-  //     data = data[url[x+1]];
-  //   }
-  // };
-
-  $scope.data = function() {
-    //Check if the sitemap is loaded
-    //If the sitemap is not loaded, get it
-    //Check if the 
-  };
-
-  // $scope.get_content = function() { $scope.server = $http.get('/database'); };
-  // $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 });
 
 
