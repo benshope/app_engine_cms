@@ -515,24 +515,22 @@ ul.social li:nth-child(6):before {
 textarea { resize: none; }
 textarea:focus, div:focus { outline: none; }
 
-.header {
+.controls {
+  right: 0px;
   position:absolute;
   z-index: 1000;
 }
-.header > * { 
+.controls > * { 
   border: 1px solid gray;
   color: gray; 
   display: inline-block; 
   padding: 15px 15px; 
+  margin-left: -5px;
 }
-.header > *:hover {  }
-
-.left { left: 0px; }
-.right { right: 0px; }
-.right > * { margin-left: -5px; }
+.controls > *:hover {  }
 
 .visual { background-color: lightblue; }
-.text {
+.html_editor {
   position:fixed;
   float: right;
   right: 0px;
@@ -540,7 +538,7 @@ textarea:focus, div:focus { outline: none; }
   width: 50%;
   height: 100%;
 }
-.text > * {
+.html_editor > * {
   box-sizing: border-box;
   border: 1px dashed gray; 
   margin-bottom: -1px;
