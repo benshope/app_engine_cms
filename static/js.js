@@ -70,6 +70,7 @@ app.directive('mapDirective', function() {
 
     var mapOptions = {
       zoom: 8,
+      draggable: false,
       center: new google.maps.LatLng(latitude, longitude),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       scrollwheel: false  
