@@ -1,3 +1,5 @@
+# © Copyright 2014 Ben Shope
+
 import webapp2
 import cgi
 import urllib

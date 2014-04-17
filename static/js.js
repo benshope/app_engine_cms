@@ -1,3 +1,5 @@
+// © Copyright 2014 Ben Shope
+
 var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {

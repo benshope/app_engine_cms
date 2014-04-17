@@ -1,4 +1,4 @@
-## App Engine CMS (In Progress)
+## App Engine CMS
 
 I love Wordpress, but it has limitations.
 
@@ -11,3 +11,5 @@ For other developers, the main benefit of this CMS will be as a best-practices b
 ## Technologies
 + [Google App Engine](https://developers.google.com/appengine/docs/python/) Back-End Web Server
 + [AngularJS](http://angularjs.org/) Front-End Javascript Framework
+
+© Copyright 2014 Ben Shope
