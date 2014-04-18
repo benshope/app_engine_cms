@@ -33,7 +33,6 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     });
   });
 
-
 app.controller('Ctrl', function($scope, $http, $window) {
   $scope.admin = true;
   $scope.url = $window.location.pathname.split('/');
