@@ -5,6 +5,8 @@ var app = angular.module('app', ['ui.bootstrap', 'ui.router']);
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
+
+  // All routes other than data need to be dynamically declared here
   $stateProvider
     .state('home', {
       url: '/',
@@ -39,7 +41,7 @@ app.controller('Ctrl', function($scope, $http, $window) {
   $scope.show_html = true;
   $scope.show_parent_html = true;
   $scope.tint = false;
-  $scope.html_strings = {0:'sdlkfj',1:'ljlkjl'};
+  $scope.html_strings = {0:'<h3><i class="fa fa-cloud"></i></h3>',1:'<h3><i class="fa fa-square-o"></i></h3>'};
 
   $scope.load_page = function() {
     $scope.html_strings = {};
