@@ -184,8 +184,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* CAROUSEL
-/ -------------------------------------------------- */
+/* CAROUSEL */
 .carousel-control {
   top: 24%;
   font-size: 150px;
@@ -216,103 +215,6 @@ h1, h2, h3, h4, h5, h6 {
 .slider .carousel-inner > .item > img,
 .slider .carousel-inner > .item > a > img {
   display: inline-block;
-}
-
-
-/* Features
-/ -------------------------------------------------- */
-.features {
-  background: gray;
-  /*border-top: 1px solid rgba(255, 255, 255, 0.54);*/
-  font-size: 20px;
-  color: white;
-  padding: 20px 0;
-}
-.features .feature {
-/*  border-right: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);*/
-  padding: 20px 10px;
-}
-/* Testimonials
-/ -------------------------------------------------- */
-.testimonials {
-  padding: 90px 0 60px;
-}
-.testimonials blockquote {
-  padding: 0 0 0 15px;
-  margin: 0 0 20px;
-  border-left: 0px solid #eeeeee;
-}
-.testimonials blockquote > div {
-  text-align: center;
-  padding: 0 200px;
-}
-.testimonials blockquote p {
-  margin-top: 30px;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.55;
-}
-.testimonials blockquote small {
-  line-height: 3.5em;
-}
-.testimonials i {
-  display: inline-block;
-  color: #dcdcdc;
-  font-size: 200px;
-  border-radius: 100px;
-  padding: 20px 22px;
-  transition: all .2s linear;
-}
-.testimonials:hover i,
-.testimonials:focus i {
-  color: #ff7d64;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.testimonials .carousel-control { background:none; top:-20%; }
-
-/* Prices
-/ -------------------------------------------------- */
-.prices {
-  background: url(../img/bg_prices.jpg);
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  padding: 100px 0 !important;
-}
-.prices .container {
-  max-width: 800px;
-}
-.prices .plan {
-  border: 5px solid #f4f4f4;
-  background: #fff;
-  padding: 15px;
-  /*border-radius: 5px;*/
-}
-.prices .plan.plan-1 {
-  margin-top: 20px;
-}
-.prices .plan.plan-2 {
-  margin-top: 20px;
-}
-.prices .plan.plan-3 {
-  margin-top: 20px;
-}
-.prices .plan .plan-title {
-  text-align: center;
-  padding: 0 0 10px 0;
-}
-.prices .plan .plan-features li {
-  padding: 5px 0;
-}
-.prices .plan .plan-price {
-  border-top: 1px dashed #d1d1d1;
-  padding: 14px 0 0 0;
-  margin: 0;
-  font-size: 20px;
 }
 
 /* CONTACT */
