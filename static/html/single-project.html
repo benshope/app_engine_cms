@@ -12,6 +12,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/colors/blue.css" rel="stylesheet">
     <link href="assets/css/menu.css" rel="stylesheet">
+    <link href="assets/css/flexslider.css" rel="stylesheet">
 	<link href="assets/css/font-awesome.css" rel="stylesheet">
 	<link href="assets/css/linecons.css" rel="stylesheet">
     <style>
@@ -36,7 +37,16 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         
 	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>	
-	
+    <script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
+    
+	<script>
+	// Can also be used with $(document).ready()
+	$(window).load(function() {
+	  $('.flexslider').flexslider({
+	    animation: "slide"
+	  });
+	});
+	</script>  	
   </head>
 
   <body>
@@ -70,109 +80,119 @@
 	    </div><!-- /container-fluid -->
 	</div><!-- /menuwrap -->
     
+     <!-- Flexslider Script -->
+    <div id="carouselwrap">
+    	<img src="assets/img/sliders/flex03.jpg" alt="">
+    </div><!-- /carouselwrap -->
         
 
     <div class="container-fluid">
     	<div class="row-fluid">
     	
-    		<div class="span8">
-    		
-				<!-- === BLOG POST ONE === -->    		
-	    		<div class="row-fluid">
-		    		<div class="span3 blog-date">
-			    		<p>
-			    			<b>Published</b><br/>
-				    		June 25, 2013
-			    		</p>
-		    		</div><!-- /span3 Blog Date -->
-		    		<div class="span9 blog-title">
-			    		<h2>Mountain bike for all</h2>
-		    		</div><!-- /span9 Blog Title -->
-	    		</div><!-- /row-fluid -->
-			    <img src="assets/img/blog01.jpg" alt="">
-				<div class="span9 offset3 whitezone">
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-					<p><a href="blog-single.html">Read More...</a></p>
-				<hr>	
-				</div><!-- /span9 -->
-
-				<!-- === BLOG POST TWO === -->    		
-	    		<div class="row-fluid">
-		    		<div class="span3 blog-date">
-			    		<p>
-			    			<b>Published</b><br/>
-				    		June 25, 2013
-			    		</p>
-		    		</div><!-- /span3 Blog Date -->
-		    		<div class="span9 blog-title">
-			    		<h2>New York love</h2>
-		    		</div><!-- /span9 Blog Title -->
-	    		</div><!-- /row-fluid -->
-			    <img src="assets/img/blog02.jpg" alt="">
-				<div class="span9 offset3 whitezone">
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-					<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-					<p><a href="blog-single.html">Read More...</a></p>
-				<hr>
-				<p><tag><i class="icon-caret-left"></i> PREVIOUS PAGE | NEXT PAGE <i class="icon-caret-right"></i></tag></p>	
-				</div><!-- /span9 -->
-	    		
-    		</div><!-- /span8 -->
-    	
-			<!-- === SIDEBAR === -->
-	    	<div class="span4 greyzone sidebar-zone">
-		    	<h4>SIDEBAR <i class="icon-chevron-down"></i></h4>
-		    	<br>
-		    	<h6>ABOUT MODUS</h6>
+	    	<!-- === PROJECT INFO === -->
+	    	<div class="span4 greyzone">
+		    	<h4>PROJECT INFORMATION <i class="icon-chevron-down"></i></h4>
 		    	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 		    	<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+		    	<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 		    	<br>
-		    	<h6>TWITTER FEED</h6>
-		    	<p>This text is a demo only, it is not an actual tweet. Thank you. <a href="#">http://goog.le/4fs83</a></p>
-		    	<p><a href="#"><i class="icon-twitter"></i>Basicoh_</a></p>
-		    	<br>
-				<h6>POPULAR POSTS</h6>
-					<ul class="popular-posts">
-		                <li>
-		                    <a href="#"><img src="assets/img/thumb01.jpg" alt="Popular Post"></a>
-		                    <p><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
-		                    <em>Posted on 02/21/13</em>
-		                </li>
-		                <li>
-		                    <a href="#"><img src="assets/img/thumb02.jpg" alt="Popular Post"></a>
-		                    <p><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
-		                    <em>Posted on 03/01/13</em>
-		                <li>
-		                    <a href="#"><img src="assets/img/thumb03.jpg" alt="Popular Post"></a>
-		                    <p><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
-		                    <em>Posted on 05/16/13</em>
-		                </li>
-		                <li>
-		                    <a href="#"><img src="assets/img/thumb04.jpg" alt="Popular Post"></a>
-		                    <p><a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
-		                    <em>Posted on 05/16/13</em>
-		                </li>
-		            </ul>
-		        <br>    
-				<h6>CATEGORIES</h6>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Design</a></p>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Develop</a></p>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Photography</a></p>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Wordpress</a></p>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Photoshop</a></p>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Marketing</a></p>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Social Media</a></p>
-				<p><i class="icon-folder-open-alt"></i> <a class="modus_color modus_color_transition" href="#">Code Tips</a></p>
-				<br>
-		    	
+		    	<p>
+				<!-- Start of button-b -->
+					<div class="button-b">
+					<a href="#">Visit Site</a>
+					</div>
+				<!-- End of button-b -->
+				</p>
 	    	</div><!-- /span4 -->
+	    	
+	    	<!-- === PROJECT LEADER === -->
+	    	<div class="span4 whitezone">
+	    		<h4>PROJECT LEADER <i class="icon-chevron-down"></i></h4>
+	    		<br>
+	    		<p><img src="assets/img/2.jpg" alt="" width="70px" height="70px" class="img-circle"> - <b>PAUL LARSSON</b></p>
+	    		<p><b>Services Used:</b></p>
+	    		<p>
+		    		- Wordpress <br/>
+		    		- Content Manager <br/>
+		    		- HTML5 & CSS3
+	    		</p>
+	    		<p><b>Categories</b></p>
+	    		<p>
+		    		- Design <br/>
+		    		- Photography <br/>
+		    		- Logo
+	    		</p>
+	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	    	</div><!-- /span4 -->
+	    	
 
-    	</div><!-- /row-fluid -->
-    </div><!-- /container-fluid -->   	
+	    	<!-- === ACCORDION === -->
+	    	<div class="span4 whitezone">
+				<div class="accordion" id="accordion2">
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+							<li_ class="li_diamond"></li_> First Class Design
+							</a>
+						</div><!-- /accordion-heading -->
+						<div id="collapseOne" class="accordion-body collapse in">
+							<div class="accordion-inner">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+							</div><!-- /accordion-inner -->
+						</div><!-- /collapse -->
+					</div><!-- /accordion-group -->
+				
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+							<li_ class="li_display"></li_> Retina Ready Theme
+							</a>
+						</div>
+						<div id="collapseTwo" class="accordion-body collapse">
+							<div class="accordion-inner">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+							</div><!-- /accordion-inner -->
+						</div><!-- /collapse -->
+					</div><!-- /accordion-group -->
+				
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+							<li_ class="li_like"></li_> Awesome Support
+							</a>
+						</div>
+						<div id="collapseTwo" class="accordion-body collapse">
+							<div class="accordion-inner">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+							</div><!-- /accordion-inner -->
+						</div><!-- /collapse -->
+					</div><!-- /accordion-group -->
+				
+					<div class="accordion-group">
+						<div class="accordion-heading">
+							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+							<li_ class="li_phone"></li_> Responsive Design
+							</a>
+						</div>
+						<div id="collapseTwo" class="accordion-body collapse">
+							<div class="accordion-inner">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis mattis lorem.
+							</div><!-- /accordion-inner -->
+						</div><!-- /collapse -->
+					</div><!-- /accordion-group -->
+				</div><!-- /span4 -->
+			</div><!-- /row-fluid -->
     	
-    	
+	</div> <!-- /container-fluid -->
 
+	<div id="carouselwrap">
+        <div class="flexslider carousel">
+			<ul class="slides">
+				<li><img src="assets/img/sliders/flex03.jpg" alt="slider"></li>
+				<li><img src="assets/img/sliders/flex04.jpg" alt="slider"></li>
+			</ul>
+		</div><!-- /flexslider -->	
+	</div><!-- /carouselwrap -->
    
    
    <!-- === FOOTER SECTION === -->

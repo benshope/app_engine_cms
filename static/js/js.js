@@ -57,9 +57,9 @@ app.controller('Ctrl', function($scope, $http, $window) {
   // $scope.post_content = function() { $http.post('/database', {content: $scope.content}); };
 
   $scope.submit = function() {
-    $http.post('/email', 
-      {name: $scope.contact_name, 
-      email: $scope.contact_email, 
+    $http.post('/email',
+      {name: $scope.contact_name,
+      email: $scope.contact_email,
       message: $scope.contact_message});
     $scope.contact_sent = true;
   };
@@ -76,7 +76,7 @@ app.directive('mapDirective', function() {
       draggable: false,
       center: new google.maps.LatLng(latitude, longitude),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      scrollwheel: false  
+      scrollwheel: false
     };
 
     var map = new google.maps.Map(elem[0], mapOptions);
