@@ -1,45 +1,86 @@
-<!-- © Copyright 2014 Ben Shope -->
-
 <html lang="en" ng-app="app">
 <head>
-  <title ng-bind="'App Engine CMS ' + $state.current.name">App Engine CMS</title>
+  <title>App Engine CMS</title>
   <link rel="shortcut icon" href="img/favicon.png">
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link href="css/style.css" rel="stylesheet">
   <link href="css/css.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- <div class="controls">
-  <i ng-click="load_page()" class="fa fa-cloud-download active"></i>
-  <i ng-click="tint = !tint" class="fa fa-tint {{tint ? 'active' : 'inactive' }}"></i>
-  <i ng-show="show_html" ng-click="show_parent_html = !show_parent_html" class="fa fa-bars {{show_parent_html ? 'active' : 'inactive' }}"></i>
-  <i ng-click="show_html = !show_html" class="fa fa-columns {{show_html ? 'active' : 'inactive'}}"></i>
-</div>
 
-<div class="html_editor flex col" ng-show="show_html">
-  <textarea  ng-repeat="(x, html_string) in html_strings" class="border padded bg-{{tint ? x : ''}}" ng-model="html_strings[x]"></textarea>
-</div>
-
-<div class="flex">
-  <div class="visual">
-    <div ui-view></div>
-    <div ng-repeat="(x, html_string) in html_strings" class="bg-{{tint ? x : ''}}" contenteditable ng-model="html_strings[x]">asdfasdf</div>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">App Engine CMS</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <div ng-show="show_html">&nbsp;</div>
-</div> -->
+</div>
 
-HOME PAGE START
 <div ui-view></div>
-HOME PAGE END
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-<script src="js/js.js"></script>
 
+<div class="container-fluid">
+   <h6 class="title-small"><i class="icon-twitter"></i> FOLLOW MODUS ON TWITTER @MODUSTHEME</h6>
+   <div class="footerzone">
+       <div class="row-fluid">
+           <div class="col-xs-4">
+               <h4>FROM THE BLOG</h4>
+               <p>Blog Post One</p>
+               <p>Blog Post Two</p>
+               <p>Blog Post Three</p>
+               <br>
+           </div><!-- /col-xs-4 -->
+
+           <div class="col-xs-4">
+               <h4>ABOUT MODUS</h4>
+            <p>Modus is a wonderful theme for everyone. No matter if you are a designer, photographer, freelancer or developer; this theme is a great way to show your work with style.</p>
+            <br>
+           </div><!-- /col-xs-4 -->
+
+           <div class="col-xs-4">
+               <h4>OUR BUNKER</h4>
+               <p>Av. Sunderville, 987 <br/>
+                  Madrid, Spain.
+               </p>
+               <p>+34 888094333</p>
+               <p>yourmail@domain.com</p>
+           </div><!-- /col-xs-4 -->
+       </div><!-- /row-fluid -->
+   </div><!-- /footerzone -->
+
+   <h6 class="title-footer">
+        <i class="icon-twitter"></i>
+        <i class="icon-tumblr"></i>
+        <i class="icon-facebook"></i>
+        <i class="icon-apple"></i>
+        <i class="icon-linkedin"></i>
+        <i class="icon-instagram"></i>
+   </h6>
+
+</div><!-- /container-fluid -->
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>
