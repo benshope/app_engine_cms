@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app="app">
 <head>
-  <title>Window Pods</title>
+  <title>App Engine CMS Blog</title>
   <link rel="shortcut icon" href="img/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="description" content="Plant a smarter vertical garden!  Window pods attach directly to the sunniest part of your home - the window.">
+  <meta name="description" content="Google App Engine CMS is a re-thinking of the simple CMS - built fast, flexible, and scalable.
+">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <link href="css/css.css" rel="stylesheet">
@@ -15,12 +16,12 @@
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" ng-init="nav_collapsed = true" ng-click="nav_collapsed = !nav_collapsed"><i class="fa fa-bars"></i></button>
     <a ui-sref="home" class="navbar-brand title pull-left" style="color: {{scroll > 0.5 ? 'black' : 'white' }};">
-      <i class="fa fa-circle main-text"></i>&nbsp;&nbsp;WINDOW PODS</a>
+      <i class="fa fa-circle main-text"></i>&nbsp;&nbsp;App Engine CMS Blog</a>
   </div>
   <div class="navbar-collapse collapse" ng-class="!nav_collapsed && 'in'">
     <ul class="nav navbar-nav navbar-right">
       <li><a style="color: {{scroll > 0.5 ? 'black' : 'white' }};" ui-sref="home">HOME</a></li>
-      <li><a style="color: {{scroll > 0.5 ? 'black' : 'white' }};" ui-sref="faq">FAQ / LEARN</a></li>
+      <li><a style="color: {{scroll > 0.5 ? 'black' : 'white' }};" ui-sref="faq">LEARN MORE</a></li>
 <!--       <li class="dropdown">
         <a style="color: {{scroll > 0.5 ? 'black' : 'white' }};" href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -30,7 +31,7 @@
         </ul>
       </li> -->
       <li><a style="color: {{scroll > 0.5 ? 'black' : 'white' }};" ui-sref="contact">CONTACT</a></li>
-      <li class="amazon-top"><a href="http://www.amazon.com/gp/product/B00JYYK9OA"><img id="amazon_top" src="/img/amazon.svg"/>&nbsp;&nbsp;ORDER NOW</a></li>
+      <li class="amazon-top"><a href="http://www.amazon.com/gp/product/B00JYYK9OA">ORDER NOW</a></li>
     </ul>
   </div>
 </div>
