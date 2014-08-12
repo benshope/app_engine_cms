@@ -2,84 +2,53 @@
 
     <div id="contactwrap">
     <header class="clearfix">
-        <div class="container">
-          <h1>AV. <b>SUNDERVILLE</b></h1>
-          <h1>POSTAL <b>987</b></h1>
-          <h1>MADRID, <b>SPAIN</b></h1>
+        <div class="container-fluid">
+          <!-- <h1><b>CONTACT</b></h1> -->
+<!--           <h1>POSTAL <b>987</b></h1>
+          <h1>MADRID, <b>SPAIN</b></h1> -->
         </div>
       </header>
     </div>
 
     <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="col-xs-4 blackzone">
-          <h4>REACH US <i class="icon-chevron-down"></i></h4>
-           <p>Av. Sunderville, 987 <br/>
-            Madrid, Spain.
-           </p>
-           <p>+34 888094333</p>
-           <p>yourmail@domain.com</p>
-        </div><!-- /col-xs-4 -->
+      <div class="row contact-us">
+        <div class="col-sm-4 blackzone">
+          <h4>GET IN TOUCH</h4>
+            <p>We love to hear the ideas, experiences, and questions of Window Pods owners - your communication helps us build the best possible indoor gardening experience.  Get in touch with us on this page, or by email at <a href="mailto:info@windowpods.org?Subject=Window%20Pods">info@windowpods.org</a></p>
+        </div>
 
-        <div class="col-xs-4 whitezone">
+                <div class="col-sm-8">
+          <form id="contact-form" role="form" ng-submit="submit()">
+            <input type="text" ng-model="contact_name" name="name" placeholder="NAME" required>
+            <input type="email" ng-model="contact_email" name="email" placeholder="EMAIL" required>
+            <textarea ng-model="contact_message" name="message" placeholder="MESSAGE" rows="5" required></textarea>
+            <button type="submit" class="send-button">{{!contact_sent ? 'SEND' : 'MESSAGE SENT, THANKS!'}}</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4 greyzone">
+          <h4>MAILING ADDRESS</h4>
+          <p>Window Pods <br/>
+            600 North Whisman Road #6 <br/>
+            Mountain View, CA 94043
+           </p>
+          <br>
+        </div>
+
+
+        <div class="col-sm-4 whitezone">
           <h4>JOBS & INTERNSHIPS</h4>
           <p>We are always searching for talented individuals. If you want to work with us, just drop us an email.</p>
-          <p><a href="#">jobs@company.com</a></p>
-        </div><!-- /col-xs-4 -->
+          <p><a href="mailto:jobs@windowpods.org?Subject=Window%20Pods">jobs@windowpods.org</a></p>
+        </div>
 
-        <div class="col-xs-4 whitezone">
-          <h4>PROJECT PLANNER</h4>
-          <p>If you have a new project in mind, fill our project planner and we will reach you to discuss in deep what you need.</p>
-        <p><a href="#">Download Planner</a></p>
-        </div><!-- /col-xs-4 -->
-      </div><!-- /row-fluid -->
+        <div class="col-sm-4 whitezone">
+          <h4>DISTRIBUTORS</h4>
+          <p>If you are looking to distribute Window Pods or purchase in bulk, get in touch with us.</p>
+        <p><a href="mailto:sales@windowpods.org?Subject=Window%20Pods">sales@windowpods.org</a></p>
+        </div>
 
-
-      <!-- === WHAT WE DO SECTION === -->
-      <div class="row-fluid">
-        <div class="col-xs-4 greyzone">
-          <h4>CONTACT US</h4>
-          <p>We are always available to chat with you. We response everything as soon as possible.</p>
-          <p>We are social people, so do not afraid to contact us. Let's drink a beer!</p>
-          <br>
-        </div><!-- /col-xs-4 -->
-
-        <div class="col-xs-4 whitezone">
-          <h4>WE ARE SOCIAL</h4>
-          <p>
-            <i class="icon-twitter"></i> @ModusTheme <br/>
-            <i class="icon-instagram"></i> Modus Theme <br/>
-            <i class="icon-linkedin"></i> Modus Theme Team <br/>
-            <i class="icon-apple"></i> Modus <br/>
-          </p>
-        </div><!-- /col-xs-4 -->
-
-        <div class="col-xs-4 map">
-          <p><iframe width="100%" height="230px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=37.735377,86.572266&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-          </p>
-        </div><!-- /col-xs-4 -->
-      </div><!-- /row-fluid -->
-    </div> <!-- /container-fluid -->
-
-
-
-<!-- <section id="contact" class="contact">
-  <div id="map" class="google-map" map-directive="" latitude="43.074688" longitude="-89.384294"></div>
-
-  <div class="contact-form">
-    <div class="container-fluid contact-form-inner">
-      <div class="row-fluid">
-        <form id="contact-form" class="contact-form" role="form" ng-submit="submit()">
-            <input type="text" ng-model="contact_name" class="form-control input-lg" name="name" placeholder="Name" required>
-            <input type="email" ng-model="contact_email" class="form-control input-lg" name="email" placeholder="Email" required>
-            <textarea ng-model="contact_message" class="form-control input-lg" name="message" placeholder="Message" rows="5" required></textarea>
-            <button type="submit" class="btn btn-custom btn-success btn-block btn-lg">Send</button>
-        </form>
       </div>
     </div>
-  </div>
-
-</section> -->
-
-
-
