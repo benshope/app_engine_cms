@@ -5,6 +5,12 @@ api_version: 1
 threadsafe: true
 
 handlers:
+# - url: /login
+#   script: main.app
+# - url: /logout
+#   script: main.app
+# - url: /data
+#   script: main.app
 - url: /mail
   script: main.app
 - url: /static
