@@ -4,7 +4,7 @@ I love Wordpress, but it has limitations.  App Engine CMS is a re-thinking of th
 
 For basic websites, this CMS will save Developers the time they would spend construcing things like pages, posts, users, comments, and a contact form.
 
-For more advanced sites, this CMS will act as just a best-practices guide and a starting-point to create amazing web experiences.
+For more advanced sites, this CMS will act as a best-practices guide and a starting-point to create amazing web experiences.
 
 There are a lot of frameworks and boilerplates that have merit.  The feature that really makes this one stand out from the crowd is it's WYSIWYG editor - made from data-binding HTML5 contenteditable.  That means changes to HTML and CSS appear instantly site-wide, as they are typed in the browser.  It is a better way to work.
 
