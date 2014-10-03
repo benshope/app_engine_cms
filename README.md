@@ -6,7 +6,7 @@ For basic websites, this CMS will save Developers the time they would spend cons
 
 For more advanced sites, this CMS will act as a best-practices guide and a starting-point to create amazing web experiences.
 
-## Why choose AE CMS?
+## The Killer Feature
 
 There are a lot of frameworks and boilerplates that have merit.  The feature that makes this one stand out from the crowd is it's WYSIWYG editor - made from data-binding HTML5 contenteditable.  That means changes to HTML and CSS appear instantly site-wide, as they are typed in the browser.  It's a better way to work.
 
