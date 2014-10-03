@@ -1,12 +1,12 @@
-## App Engine CMS
+## App Engine CMS (Under Construction)
 
-I love Wordpress, but it has limitations.
+I love Wordpress, but it has limitations.  Google App Engine CMS is a re-thinking of the simple CMS - built fast, flexible, and scalable.
 
-Google App Engine CMS is a re-thinking of the simple CMS - built fast, flexible, and scalable.
+For basic websites, this CMS will save Developer's the time they would spend construcing things like pages, posts, users, comments, and a contact form.
 
-For some developers, this CMS will just save them time they would spend construcing things like pages, posts, users, comments, and a contact form for a simple website.
+For more advanced sites, this CMS will be just a best-practices guide, and a starting-point to create amazing web experiences.
 
-For other developers, the main benefit of this CMS will be as a best-practices boilerplate - a starting-point to create amazing web experiences with AngularJS and Google App Engine.
+There are a lot of frameworks and boilerplates that have merit.  The feature that really makes this one stand out from the crowd is it's WYSIWYG editor - made from data-binding HTML5 contenteditable.  Changes to HTML and CSS appear instantly site-wide, as they are typed in the browser.  It is a better way to work.
 
 ## Technologies
 + [Google App Engine](https://developers.google.com/appengine/docs/python/) Back-End Web Server
