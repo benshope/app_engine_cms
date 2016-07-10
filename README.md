@@ -1,4 +1,4 @@
-## App Engine CMS (Under Construction)
+## App Engine CMS (NOT USABLE)
 
 This project is meant to rapidly take users from nothing to a functioning website.  Right now it is just a nicely-written boilerplate with Angular and Bootstrap.
 
